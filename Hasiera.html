@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKE-GrAL - Hasiera</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Banner Hero Superior */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                        url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Enlaces del índice interno */
+        .quick-nav-list a {
+            color: #333;
+            text-decoration: underline;
+            font-size: 0.95rem;
+        }
+        .quick-nav-list a:hover {
+            color: #0d6efd;
+        }
+
+        /* Botones oscuros del Google Site */
+        .btn-site-dark {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-weight: 500;
+            border-radius: 4px;
+            padding: 8px 24px;
+        }
+        .btn-site-dark:hover {
+            background-color: #404040;
+            color: #ffffff;
+        }
+
+        /* Secciones del formulario */
+        .form-card {
+            background-color: #ffffff;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Pie de página (Footer) */
+        .footer-header {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (NAVBAR)      -->
+    <!-- ========================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold me-4" href="#">PKE-GrAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Hasiera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Araudia</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Aurreko GrAL-k
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Gradu Amaierako Lanak</a></li>
+                            <li><a class="dropdown-item" href="#">Posterrak</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deialdia eta Entregak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- BANNER HERO CON IMAGEN Y TÍTULO            -->
+    <!-- ========================================== -->
+    <header class="hero-banner">
+        <div class="container py-4">
+            <h1 class="display-4 fw-normal mb-0">GrALei buruzko infomazioa<br><small class="fs-2">(UPV/EHU)</small></h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- ÍNDICE DE ENLACES INTERNOS -->
+        <section class="mb-5 ms-md-3 quick-nav-list">
+            <ul class="list-unstyled">
+                <li class="mb-1"><a href="#orokorra" class="fw-bold text-uppercase">INFORMAZIO OROKORRA</a></li>
+                <ul class="list-unstyled ms-4 mb-2">
+                    <li><a href="#esleipena">GrALaren esleipena GAURen</a></li>
+                    <li><a href="#matrikula">GrALaren matrikula</a></li>
+                    <li><a href="#gauzatzea">GrALaren gauzatzea</a></li>
+                </ul>
+                <li class="mb-1"><a href="#araudia" class="fw-bold text-uppercase">ARAUDIA</a></li>
+                <li class="mb-1"><a href="#entregak" class="fw-bold text-uppercase">ENTREGAK ETA DEIALDIAK</a></li>
+                <li class="mb-1"><a href="#aurrekoak" class="fw-bold text-uppercase">AURREKO GRAL-K</a></li>
+                <li class="mb-1"><a href="#galdetegia" class="fw-bold text-uppercase">AUTOEBALUAZIO GALDETEGIA</a></li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN: INFORMAZIO OROKORRA -->
+        <section id="orokorra" class="mb-5">
+            <h2 class="text-center fw-bold mb-4 text-uppercase">INFORMAZIO OROKORRA</h2>
+            
+            <div id="esleipena" class="mb-4">
+                <h4 class="fw-bold">GrALaren esleipena GAURen</h4>
+                <p class="mb-1"><strong>Baldintzak:</strong> Gutxienez 168 kreditu gaindituta egon behar dira.</p>
+                <p class="mb-1"><strong>Izena ematea:</strong> GAUR aplikazioaren bidez egin behar da (<em>Gradu Amaierako Lana-Master Amaierako Lana</em> atalean).</p>
+            </div>
+
+            <!-- BLOQUE: MATRIKULA (IMAGEN + TEXTO) -->
+            <div id="matrikula" class="row align-items-center my-4 g-4">
+                <div class="col-md-5">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded shadow-sm" alt="GrALaren matrikula">
+                </div>
+                <div class="col-md-7">
+                    <h4 class="fw-bold mb-3">GrALaren matrikula</h4>
+                    <ul class="ps-3">
+                        <li class="mb-2">Gehienez <strong>3 hautazko irakasgai (18 kreditu)</strong> izan daitezke gainditu gabe, GrALaren kredituak kontuan hartu gabe.</li>
+                        <li class="mb-2">Matrikula <strong>GrALa defendatuko den ikasturtean</strong> egitea gomendatzen da.</li>
+                        <li class="mb-2">Matrikula egiteko, GAUR aplikazioan honako bidea jarraitu behar da:<br><strong>GAUR &rarr; Matrikulak &rarr; Bestelako matrikulak</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BLOQUE: GAUZATZEA (TEXTO + IMAGEN) -->
+            <div id="gauzatzea" class="row align-items-center my-4 g-4">
+                <div class="col-md-7 order-2 order-md-1">
+                    <h4 class="fw-bold mb-3">GrALaren gauzatzea</h4>
+                    <p><strong>Helburua:</strong> Graduan lortutako gaitasunak sendotzea eta aplikatzea da, arloarekin lotutako arazo bati konponbidea diseinatuz eta inplementatuz.</p>
+                    <p class="fw-bold mb-1">Memoria:</p>
+                    <ul class="ps-3 mb-3">
+                        <li>Ingeniaritza-proiektu baten egitura eta estilo formala izan behar du.</li>
+                        <li>GJHek (Garapen Jasangarrirako Helburuak) gutxienez 200 hitzeko gogoeta espezifiko bat izan behar dute (laburpenaren ostean), eta GAURen bidez adierazi behar dira defentsa eskatzean.</li>
+                    </ul>
+                    <p class="fw-bold mb-1">Laguntza eta gidak:</p>
+                    <ul class="ps-3">
+                        <li><a href="#">Gradu Amaierako Lana egiteko materialak</a></li>
+                        <li><a href="#">Nola egin lan akademiko bat</a></li>
+                        <li><a href="#">Unibertsitate Liburutegiak eskaintzen dituen GrAL ikasleentzako prestakuntza ikastaroak</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 order-1 order-md-2">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded shadow-sm" alt="Fakultatea">
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <!-- SECCIÓN: ARAUDIA -->
+        <section id="araudia" class="row align-items-center my-5 text-center text-md-start">
+            <div class="col-md-4 text-center">
+                <i class="bi bi-gavel text-secondary display-1"></i>
+            </div>
+            <div class="col-md-8">
+                <h2 class="display-5 fw-light text-uppercase mb-2">ARAUDIA</h2>
+                <p class="text-muted">GrALaren araudiaren informazioa kontsultatu</p>
+                <a href="#" class="btn btn-site-dark mt-2">EHUn gradu amaierako araudia</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN GRID: ENTREGAK ETA AURREKO GRAL-K -->
+        <section class="row g-4 my-5">
+            <!-- Entregak Card -->
+            <div id="entregak" class="col-md-6">
+                <div class="d-flex flex-column align-items-center text-center p-4 h-100 border-0">
+                    <i class="bi bi-calendar-check text-info display-1 mb-3"></i>
+                    <h3 class="fw-light text-uppercase">ENTREGAK ETA DEIALDIAK</h3>
+                    <p class="text-muted small">Defentsa egiteko jarraitu beharreko urratsak eta deialdiak, baita memoriaren entregari buruzko gida eta aurkeztu beharreko dokumentuak ere.</p>
+                    <a href="#" class="btn btn-site-dark mt-auto">DEIALDIAK</a>
+                </div>
+            </div>
+
+            <!-- Aurreko GrAL-k Card -->
+            <div id="aurrekoak" class="col-md-6">
+                <div class="d-flex flex-column align-items-center text-center p-4 h-100 border-0">
+                    <i class="bi bi-journal-album text-warning display-1 mb-3"></i>
+                    <h3 class="fw-light text-uppercase">AURREKO GRAL-K</h3>
+                    <p class="text-muted small">Aurreko urteetako ikasleek egindako Gradu Amaierako Lanak (GrAL.) eta posterrak kontsultatu eta hainbat adibide ezagutzeko. (Software ingeniaritza, konputazioa, konputagailuen ingeniaritza eta adimen artifiziala)</p>
+                    <a href="#" class="btn btn-site-dark mt-auto">AURREKO LANAK</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: AUTOEBALUAZIO GALDETEGIA -->
+        <section id="galdetegia" class="my-5">
+            <div class="text-center max-w-700 mx-auto mb-4">
+                <h3 class="fw-light text-uppercase mb-3">AUTOEBALUAZIO GALDETEGIA</h3>
+                <p class="text-muted small">Formulario honen bidez, Gradu Amaierako Lanaren webgunearen ulermena eta erabilgarritasuna ebaluatu nahi ditugu. Zure erantzunek webguneko informazioa argia eta ulerterraza den aztertzen eta, behar izanez gero, hobekuntzak proposatzen lagunduko digute.</p>
+            </div>
+
+            <!-- FORMULARIO ESTILO GOOGLE FORMS -->
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="form-card p-4">
+                        <h4 class="fw-normal mb-3">Ulermena autoebaluatzeko galdetegia</h4>
+                        
+                        <form>
+                            <!-- Pregunta 1 -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Nola baloratuke zenuke webgunea?</label>
+                                <div class="d-flex justify-content-between px-2 mt-2">
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_1" value="1">
+                                        <label class="form-check-label small" for="q1_1">1</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_2" value="2">
+                                        <label class="form-check-label small" for="q1_2">2</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_3" value="3">
+                                        <label class="form-check-label small" for="q1_3">3</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_4" value="4">
+                                        <label class="form-check-label small" for="q1_4">4</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_5" value="5">
+                                        <label class="form-check-label small" for="q1_5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pregunta 2 -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Erraza egin zaizu webgunean nabigatzea?</label>
+                                <div class="d-flex justify-content-between px-2 mt-2">
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_1" value="1">
+                                        <label class="form-check-label small" for="q2_1">1</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_2" value="2">
+                                        <label class="form-check-label small" for="q2_2">2</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_3" value="3">
+                                        <label class="form-check-label small" for="q2_3">3</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_4" value="4">
+                                        <label class="form-check-label small" for="q2_4">4</label>
+                                    </div>
+                                    <div class="text-center">
+                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_5" value="5">
+                                        <label class="form-check-label small" for="q2_5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary rounded px-4">Bidali</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- PIE DE PÁGINA (ABOUT US / FOOTER)         -->
+    <!-- ========================================== -->
+    <footer class="mt-5 border-top">
+        <div class="footer-header">
+            ABOUT US
+        </div>
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <!-- Logo UPV/EHU -->
+                <div class="col-md-4 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="Universidad del País Vasco / Euskal Herriko Unibertsitatea">
+                </div>
+
+                <!-- Mapa / Ubicación -->
+                <div class="col-md-4 text-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="col-md-4 text-center text-md-start small">
+                    <p class="mb-1"><strong>Helbidea:</strong> Manuel Lardizabal pasealekua, 1, 20018 Donostia / San Sebastián, Gipuzkoa</p>
+                    <p class="mb-1"><strong>Herrialdea:</strong> Gipuzkoa</p>
+                    <p class="mb-1"><strong>Telefonoa:</strong> 943 01 52 45</p>
+                    <p class="mb-0"><strong>Web gunea:</strong> <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank">Informatikako Fakultatea</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
