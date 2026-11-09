@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKE-GrAL - Deialdia eta Entregak</title>
+
+    <!-- Bootstrap 5 CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Banner Hero de la cabecera */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Botones oscuros estilo Google Sites */
+        .btn-site-dark {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-weight: 500;
+            border-radius: 4px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-site-dark:hover {
+            background-color: #404040;
+            color: #ffffff;
+        }
+
+        /* Estilo para los acordeones */
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: #0d6efd;
+            box-shadow: none;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+
+        .footer-header {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold me-4" href="index.html">PKE-GrAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hasiera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="araudia.html">Araudia</a>
+                    </li>
+                    
+                    <!-- Desplegable Aurreko GrAL-k -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Aurreko GrAL-k
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/AurrekoGrALk.html">Aurreko GrAL-k Hasiera</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/konputagailuen-ingeniaritza.html">Konputagailuen ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/software-ingeniaritza.html">Software ingeniaritza</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/poster.html">Poster</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="deialdia-entregak.html">Deialdia eta Entregak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <header class="hero-banner">
+        <div class="container py-4">
+            <h1 class="display-4 fw-normal mb-0">Entregak eta deialdi desberdinen egutegiak</h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- INTRODUCCIÓN DE DEIALDIAK -->
+        <section class="mb-5">
+            <h2 class="fw-bold mb-3">Deialdiak</h2>
+            <p class="mb-3">
+                Gradu Amaierako Lanaren defentsa egiteko, ikasleak deialdi bat aukeratu eta bertan adierazitako epeak bete beharko ditu. Deialdi bakoitzean hainbat urrats daude: lehenik, <strong>defentsa GAUR bitartez eskatu</strong> egin behar da; ondoren, <strong>TFGaren memoria ADDIn entregatu eta posterra bidali</strong> behar da; eta, azkenik, <strong>defentsa deialdi bakoitzean ezarritako datetan</strong> egingo da.
+            </p>
+            <p class="mb-3">
+                Deialdi bakoitzak bere epeak eta defentsa-datak ditu. Gainera, zuzendariak eta epaimahaiak beren eginkizunak betetzeko epeak dituzte. Ikasleak ikasturte bakoitzean gehienez bi deialdi erabili ahal izango ditu.
+            </p>
+            <p class="text-muted mb-4">
+                Beheko ataletan deialdi bakoitzaren, zuzendariaren eta epaimahaiaren epeak kontsulta daitezke.
+            </p>
+        </section>
+
+        <!-- REJILLA DE LAS 4 DEIALDIAS (2x2 EN PC / 1x4 EN MÓVIL) -->
+        <section class="mb-5">
+            <div class="row g-4">
+                
+                <!-- 1. DEIALDIA -->
+                <div class="col-12 col-md-3">
+                    <div class="accordion shadow-sm rounded border" id="accordionDeialdia1">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    1. DEIALDIA
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1">
+                                <div class="accordion-body">
+                                    <ul class="ps-3 mb-0">
+                                        <li class="mb-2"><strong>GAURen matrikula eta defentsa-eskaera:</strong> 2025eko urriaren 16ra arte.</li>
+                                        <li class="mb-2"><strong>Lana ADDIn entregatu eta posterra bidali:</strong> 2025eko urriaren 26ra arte.</li>
+                                        <li class="mb-2"><strong>Defentsa:</strong> 2025eko azaroaren 3tik 7ra.</li>
+                                        <li class="mb-0"><strong>Azken kalifikazioak:</strong> 2025eko azaroaren 17an.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. DEIALDIA -->
+                <div class="col-12 col-md-3">
+                    <div class="accordion shadow-sm rounded border" id="accordionDeialdia2">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    2. DEIALDIA
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2">
+                                <div class="accordion-body">
+                                    <ul class="ps-3 mb-0">
+                                        <li class="mb-2"><strong>GAURen matrikula eta defentsa-eskaera:</strong> 2026ko otsailaren 5era arte.</li>
+                                        <li class="mb-2"><strong>Lana ADDIn entregatu eta posterra bidali:</strong> 2026ko otsailaren 15era arte.</li>
+                                        <li class="mb-2"><strong>Defentsa:</strong> 2026ko otsailaren 23tik 27ra.</li>
+                                        <li class="mb-0"><strong>Azken kalifikazioak:</strong> 2026ko martxoaren 9an.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. DEIALDIA -->
+                <div class="col-12 col-md-3">
+                    <div class="accordion shadow-sm rounded border" id="accordionDeialdia3">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    3. DEIALDIA
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3">
+                                <div class="accordion-body">
+                                    <ul class="ps-3 mb-0">
+                                        <li class="mb-2"><strong>GAURen matrikula eta defentsa-eskaera:</strong> 2026ko ekainaren 15era arte.</li>
+                                        <li class="mb-2"><strong>Lana ADDIn entregatu eta posterra bidali:</strong> 2026ko ekainaren 21era arte.</li>
+                                        <li class="mb-2"><strong>Defentsa:</strong> 2026ko ekainaren 29tik uztailaren 1sera.</li>
+                                        <li class="mb-0"><strong>Azken kalifikazioak:</strong> 2026ko uztailaren 22an.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DEIALDIA -->
+                <div class="col-12 col-md-3">
+                    <div class="accordion shadow-sm rounded border" id="accordionDeialdia4">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    4. DEIALDIA
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4">
+                                <div class="accordion-body">
+                                    <ul class="ps-3 mb-0">
+                                        <li class="mb-2"><strong>GAURen matrikula eta defentsa-eskaera:</strong> 2026ko irailaren 1era arte.</li>
+                                        <li class="mb-2"><strong>Lana ADDIn entregatu eta posterra bidali:</strong> 2026ko irailaren 9ra arte.</li>
+                                        <li class="mb-2"><strong>Defentsa:</strong> 2026ko irailaren 16tik 25era.</li>
+                                        <li class="mb-0"><strong>Azken kalifikazioak:</strong> 2026ko urriaren 5ean.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: ZUZENDARIA -->
+        <section class="mb-4">
+            <div class="accordion shadow-sm rounded border" id="accordionZuzendaria">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingZuzendaria">
+                        <button class="accordion-button collapsed fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZuzendaria" aria-expanded="false" aria-controls="collapseZuzendaria">
+                            ZUZENDARIA
+                        </button>
+                    </h2>
+                    <div id="collapseZuzendaria" class="accordion-collapse collapse" aria-labelledby="headingZuzendaria">
+                        <div class="accordion-body">
+                            <p class="mb-3">
+                                Defentsa-eskaera egin ondoren, lanaren zuzendariak ikaslearen <strong>defentsa-oniritzia dokumentua</strong> eman beharko du. Horretarako, dagokion dokumentua bete beharko du, epaimahaia antolatzeko beharrezko xehetasunak adieraziz. Deialdi bakoitzean zuzendariak dokumentua betetzeko bere epea izango du.
+                            </p>
+                            <ul class="ps-3 mb-0">
+                                <li class="mb-1"><strong>1. deialdia:</strong> 2025eko urriaren 17ra arte.</li>
+                                <li class="mb-1"><strong>2. deialdia:</strong> 2026ko otsailaren 6ra arte.</li>
+                                <li class="mb-1"><strong>3. deialdia:</strong> 2026ko ekainaren 16ra arte.</li>
+                                <li class="mb-1"><strong>4. deialdia:</strong> 2026ko irailaren 2ra arte.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: EPAIMAHAIA -->
+        <section class="mb-5">
+            <div class="accordion shadow-sm rounded border" id="accordionEpaimahaia">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingEpaimahaia">
+                        <button class="accordion-button collapsed fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEpaimahaia" aria-expanded="false" aria-controls="collapseEpaimahaia">
+                            EPAIMAHAIA
+                        </button>
+                    </h2>
+                    <div id="collapseEpaimahaia" class="accordion-collapse collapse" aria-labelledby="headingEpaimahaia">
+                        <div class="accordion-body">
+                            <p class="mb-3">
+                                Epaimahaiak TFGaren defentsa ebaluatuko du eta dagokion <strong>akta eta kalifikazioa</strong> egingo ditu. Epaimahaiko idazkariak deialdi bakoitzean ezarritako datan kalifikazioa eta akta bete beharko ditu. Kalifikazioak argitaratu ondoren, ikasleak <strong>3 laneguneko epea</strong> izango du erreklamazioa egiteko.
+                            </p>
+                            <ul class="ps-3 mb-0">
+                                <li class="mb-1"><strong>1. deialdia:</strong> 2025eko azaroaren 11.</li>
+                                <li class="mb-1"><strong>2. deialdia:</strong> 2026ko martxoaren 3.</li>
+                                <li class="mb-1"><strong>3. deialdia:</strong> 2026ko uztailaren 17.</li>
+                                <li class="mb-1"><strong>4. deialdia:</strong> 2026ko irailaren 29.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: INFORMASIO GUZTIA TAULETAN -->
+        <section class="mb-5">
+            <h6 class="fw-bold mb-2">Emandako informazioa guztia tauletan:</h6>
+            <ul class="ps-3">
+                <li><a href="#" class="text-decoration-underline text-dark fw-semibold">2025/26 ikasturteko defentsarako prozedura eta egutegia</a></li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN: MEMORIAREN ENTREGA -->
+        <section class="mb-5">
+            <h3 class="fw-bold mb-3">Memoriaren entrega</h3>
+            <p class="mb-3">
+                Memoria <strong>ADDI sistemaren bidez</strong> entregatu behar da, kasu berezietan izan ezik. ADDI erabiltzen ez bada, <strong>3 kopia</strong> entregatu behar dira fakultateko idazkaritzan.
+            </p>
+            <p class="fw-semibold mb-2">Entregatu beharreko dokumentuak:</p>
+            <ul class="ps-3 mb-4">
+                <li class="mb-2"><strong>Memoria</strong></li>
+                <li class="mb-2"><strong>Lana zabaltzeko baimena</strong> &mdash; baimena eman edo ez eman, dokumentua derrigorrez aurkeztu behar da.</li>
+                <li class="mb-2"><strong>Posterra</strong> &mdash; TFGaren aurkezpenerako prestatutako poster bat, aukerakoa.</li>
+            </ul>
+
+            <!-- TARJETAS CON IMÁGENES Y BOTONES DE ENTREGA (ADDI Y POSTER) -->
+            <div class="row g-4 my-3">
+                <!-- ADDI CARD -->
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center p-3">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                            <div class="mb-3">
+                                <img src="https://via.placeholder.com/250x80/ffffff/e60000?text=addi" class="img-fluid" alt="ADDI Logo" style="max-height: 90px; object-fit: contain;">
+                            </div>
+                            <h5 class="fw-bold text-uppercase mb-3">ADDI BIDEZKO ENTREGA</h5>
+                            <a href="#" class="btn btn-site-dark mt-auto">Lana ADDIra igotzeko argibideak</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POSTER CARD -->
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm text-center p-3">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                            <div class="mb-3">
+                                <i class="bi bi-person-workspace text-warning display-2"></i>
+                            </div>
+                            <h5 class="fw-bold text-uppercase mb-3">POSTER</h5>
+                            <a href="#" class="btn btn-site-dark mt-auto">Poster informazio gehigarria eta adibideak</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="mt-5 border-top">
+        <div class="footer-header">
+            <a href="about-us.html" class="text-white text-decoration-none">ABOUT US</a>
+        </div>
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="UPV/EHU Logo">
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-start small">
+                    <p class="mb-1"><strong>Helbidea:</strong> Manuel Lardizabal pasealekua, 1, 20018 Donostia / San Sebastián, Gipuzkoa</p>
+                    <p class="mb-1"><strong>Herrialdea:</strong> Gipuzkoa</p>
+                    <p class="mb-1"><strong>Telefonoa:</strong> 943 01 52 45</p>
+                    <p class="mb-0"><strong>Web gunea:</strong> <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank">Informatikako Fakultatea</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

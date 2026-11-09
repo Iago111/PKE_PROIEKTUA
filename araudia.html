@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKE-GrAL - Araudia</title>
+
+    <!-- Bootstrap 5 CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Banner Hero de la cabecera */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Botones oscuros estilo Google Sites */
+        .btn-site-dark {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-weight: 500;
+            border-radius: 4px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-site-dark:hover {
+            background-color: #404040;
+            color: #ffffff;
+        }
+
+        /* Estilo para los acordeones estilo Google Sites */
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: #0d6efd;
+            box-shadow: none;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+
+        .footer-header {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold me-4" href="index.html">PKE-GrAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hasiera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="araudia.html">Araudia</a>
+                    </li>
+                    
+                    <!-- Desplegable Aurreko GrAL-k -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Aurreko GrAL-k
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/AurrekoGrALk.html">Aurreko GrAL-k Hasiera</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/konputagailuen-ingeniaritza.html">Konputagailuen ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/software-ingeniaritza.html">Software ingeniaritza</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/poster.html">Poster</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="deialdia-entregak.html">Deialdia eta Entregak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <header class="hero-banner">
+        <div class="container py-4">
+            <h1 class="display-3 fw-normal mb-0">Araudia</h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- GRUPO 1: INFORMATIKA FAKULTATEKO ARAUDIA -->
+        <section class="mb-5">
+            <p class="text-muted mb-4">
+                Ondorengo testuak EHUko Informatika Fakultateak Informatika Ingeniaritzako Graduko Amaierako Lanerako (GRAL) ezarritako araudi espezifikoa laburbiltzen du. Bertan azaltzen dira Fakultateko ikasleek lana egiteko, bideratzeko, entregatzeko eta defendatzeko jarraitu behar dituzten urratsak, epeak, espezialitateak eta irizpide praktikoak.
+            </p>
+
+            <div class="accordion shadow-sm rounded border mb-4" id="accordionAraudiaFakultatea">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingFakultatea">
+                        <button class="accordion-button fs-4 fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFakultatea" aria-expanded="true" aria-controls="collapseFakultatea">
+                            Informatika Fakultatean GrALa defendatzeari buruzko araudia
+                        </button>
+                    </h2>
+                    <div id="collapseFakultatea" class="accordion-collapse collapse show" aria-labelledby="headingFakultatea">
+                        <div class="accordion-body px-4 pb-4">
+
+                            <!-- 1. Alderdi Orokorrak -->
+                            <h5 class="fw-bold mt-3 mb-2">1. Alderdi Orokorrak eta Izaera</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Izaera:</strong> Ikasle bakoitzak banaka egin beharreko lana da, zuzendari baten edo gehiagoren gainbegiradapean, graduan lortutako gaitasunak eta trebetasunak integratzeko.</li>
+                                <li class="mb-2"><strong>Kredituak:</strong> Derrigorrezko irakasgaia da eta 12 kredituko lan-karga du.</li>
+                                <li class="mb-2"><strong>Defendatzeko baldintzak:</strong> Ikasketa-planean gehienez 18 kreditu (hautazko 3 irakasgai) falta zaizkionean defendatu eta ebaluatu ahal izango da.</li>
+                                <li class="mb-2"><strong>Jabetza Intelektuala:</strong> Eskubideak ikasleari dagokio. Memoria ADDI unibertsitateko gordailu instituzionalean argitaratu ahal izango da, ikaslearen baimenaren arabera.</li>
+                                <li class="mb-2"><strong>Derrigorrezko atal bereziak:</strong>
+                                    <ul class="ps-3 mt-1">
+                                        <li><strong>Etika, Balio Demokratikoak eta GJHak:</strong> Gutxienez 200 hitzeko gogoeta-atal bat txertatu behar da laburpenaren ondoren eta idatziaren aurretik, Giza Eskubideak, genero-berdintasuna, irisgarritasuna eta Garapen Jasangarrirako Helburuak (GJH) aztertzeko.</li>
+                                        <li><strong>Adimen Artifizialaren erabilera:</strong> Adimen Artifizialaren erabilerari buruzko adierazpena memoriaren eranskinean agertu behar da beti.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- 2. Helburuak eta Trebetasunak -->
+                            <h5 class="fw-bold mb-2">2. Helburuak eta Trebetasunak</h5>
+                            <p class="mb-2">Lanak graduko gaitasunak sendotzea eta aplikatzea du helburu, jatorrizko lan bat eginez. Garatu beharreko trebetasunak honako hauek dira:</p>
+                            <ol class="ps-3 mb-4">
+                                <li>Proposatutako helburuak lortzea eta zailtasunak autonomiaz konpontzea.</li>
+                                <li>Lana planifikatzea eta kudeatzea.</li>
+                                <li>Memoria tekniko edo zientifiko bat idaztea, hizkuntza inklusiboa erabiliz.</li>
+                                <li>Egindako lana jendaurrean azaltzea eta defendatzea.</li>
+                            </ol>
+
+                            <!-- 3. Matrikula eta Deialdiak -->
+                            <h5 class="fw-bold mb-2">3. Matrikula eta Deialdiak</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Deialdiak:</strong> Matrikula bakoitzak ikasturte berean bi deialdi ofizialetarako eskubidea ematen du. Gainditzen ez bada, hurrengo ikasturtean berriro matrikulatu beharko da.</li>
+                                <li class="mb-2"><strong>Hizkuntza:</strong> Ikasleak matrikulan zehaztuko du zein hizkuntzatan (euskara, gaztelania edo ingelesa) egin eta defendatu nahi duen lana.</li>
+                                <li class="mb-2"><strong>Egutegia:</strong> Gradu Amaierako Lanen Batzordeak proposatuko du eta Fakultate Batzarrak onartuko du.</li>
+                            </ul>
+
+                            <!-- 4. Lanen Zuzendaritza -->
+                            <h5 class="fw-bold mb-2">4. Lanen Zuzendaritza</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Zuzendaridetza:</strong> Unibertsitatearekin lotura duten doktoreek edo doktorego-aurreko kontratudunek parte hartu ahal izango dute, betiere barneko irakasle batekin batera.</li>
+                                <li class="mb-2"><strong>Kanpoko lanak:</strong> Lana EHU ez den erakunde batean egiten bada (enpresa, Erasmus, etab.), unibertsitatetik kanpoko zuzendari bat egon daiteke, baina derrigorrezkoa da EHUko zuzendarikide bat izatea jarraipena egiteko.</li>
+                            </ul>
+
+                            <!-- 5. Gaiak eta Espezialitateak -->
+                            <h5 class="fw-bold mb-2">5. Gaiak eta Espezialitateak</h5>
+                            <p class="mb-2">Lana ikasleak aukeratutako espezialitatearen barruan kokatuko da:</p>
+                            <ul class="ps-3 mb-4">
+                                <li>Konputagailuen Ingeniaritza</li>
+                                <li>Konputazioa</li>
+                                <li>Softwarearen Ingeniaritza</li>
+                            </ul>
+
+                            <!-- 6. Lan Motak eta Esleipena -->
+                            <h5 class="fw-bold mb-2">6. Lan Motak eta Esleipena</h5>
+                            <p class="mb-2">Trikulu mota hiru bidetatik egin daiteke:</p>
+                            <ol class="ps-3 mb-4">
+                                <li class="mb-1"><strong>Adostutakoak:</strong> Ikaslearen eta irakaslearen artean zuzenean definitutakoak.</li>
+                                <li class="mb-1"><strong>Eskainitakoak:</strong> Sailek urtero espezialitateka argitaratzen dituzten lanen artetik aukeratutakoak.</li>
+                                <li class="mb-1"><strong>Kanpo-erakundeetakoak:</strong> Enpresetan edo mugikortasun-programetan (Erasmus/Séneca) egindakoak.</li>
+                            </ol>
+
+                            <!-- 7. Ebaluazio-Epaimahaia -->
+                            <h5 class="fw-bold mb-2">7. Ebaluazio-Epaimahaia</h5>
+                            <p class="mb-2">Lana ebaluatzeko epaimahai bakoitza hiru kidek osatuko dute (guztiak ikastegiko irakasleak):</p>
+                            <ul class="ps-3 mb-2">
+                                <li><strong>Lehendakaria:</strong> Fakultateko Batzarrak izendatua.</li>
+                                <li><strong>Idazkaria:</strong> Lanaren zuzendaria (edo zuzendarikide bat).</li>
+                                <li><strong>Kidea:</strong> Gaian aditua den irakasle bat.</li>
+                            </ul>
+                            <p class="mb-4">Defentsak egiteko garaian, lana inskribatutako hizkuntza bermatuko da epaimahaian.</p>
+
+                            <!-- 8. Aurkezpena eta Defentsa -->
+                            <h5 class="fw-bold mb-2">8. Aurkezpena eta Defentsa</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Memoria:</strong> Formatu librekoa da, baina azalak Fakultateko formatu estandarra jarraitu behar du. Gomendatutako luzera 60 orrialde ingurukoa da (eranskinak kanpo).</li>
+                                <li class="mb-2"><strong>Gordailua:</strong> Digitaliki entregatuko da, ADDI gordailuaren bidez.</li>
+                                <li class="mb-2"><strong>Posterria (gomendioa):</strong> Egindako lana laburtzen duen poster bertikal bat jartzea gomendatzen da Fakultateko hallean.</li>
+                                <li class="mb-2"><strong>Defentsa-denbora:</strong> Gomendatutako denbora 20 minutukoa da (gehienez 30 meken/minutu). Ondoren, epaimahaiaren galderei erantzun beharko zaie.</li>
+                                <li class="mb-2"><strong>Hizkuntza:</strong> Defentsa memoria idatzi den hizkuntza berean egin beharko da (euskara, gaztelania edo ingelesa).</li>
+                            </ul>
+
+                            <!-- 9. Ebaluazioa eta Kalifikazioa -->
+                            <h5 class="fw-bold mb-2">9. Ebaluazioa eta Kalifikazioa</h5>
+                            <p class="mb-2">Kalifikazioa 0tik 10era bitarteko zenbakizko eskalarekin emango da, hamartar batekin:</p>
+                            <ul class="ps-3 mb-3">
+                                <li><strong>Ez Aurkeztua (EA):</strong> Eskubideari uko eginez gero.</li>
+                                <li><strong>0 - 4,9:</strong> Ez Gainditua (FG)</li>
+                                <li><strong>5,0 - 6,9:</strong> Gainditua (G)</li>
+                                <li><strong>7,0 - 8,9:</strong> Oso Ongi (OO)</li>
+                                <li><strong>9,0 - 10:</strong> Bikaina (B)</li>
+                                <li><strong>Ohorezko Matrikula:</strong> 9,0 edo gehiagoko kalifikazioa duten lanen artean eman ahal izango da, gehienez matrikulatutako ikasleen %5ari.</li>
+                            </ul>
+
+                            <!-- 10. Kudeaketarako Prozesu eta Dokumentu Nagusiak -->
+                            <h5 class="fw-bold mb-2">10. Kudeaketarako Prozesu eta Dokumentu Nagusiak</h5>
+                            <ol class="ps-3 mb-0">
+                                <li class="mb-1">Sailen eskaintza publikoa espezialitateen arabera.</li>
+                                <li class="mb-1">Lana inskribatzea zuzendariaren onespenarekin.</li>
+                                <li class="mb-1">Inskribatutako lanak batzordeak onartzea.</li>
+                                <li class="mb-1">Matrikula egitea.</li>
+                                <li class="mb-1">Memoria moduan digitalean entregatzea (eta, aukeran, posterra).</li>
+                                <li class="mb-1">ADDIren bidez lana zabaltzeko baimen-dokumentua aurkeztea.</li>
+                                <li class="mb-1">Defentsa publikoa epaimahaiaren aurrean.</li>
+                                <li class="mb-1">Epaimahaiaren txostena eta akta sinatzea.</li>
+                            </ol>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRUPO 2: ZEHZAPEN OROKORRAK (EHU-ko Arautegi Orokorra) -->
+        <section class="mb-5">
+            <p class="text-muted mb-4">
+                Ondorengo testuak Euskal Herriko Unibertsitateak (UPV/EHU) gradu guztietarako ezarritako Gradu Amaierako Lanen Arautegi Orokorra (EHAA) biltzen du. Bertan jasotzen dira unibertsitate-mailako oinarrizko irizpideak, lege-esparrua, etika-baldintzak, kalifikazio-sistemak eta ikastegi guztiek bete beharreko arau orokorrak.
+            </p>
+
+            <div class="accordion shadow-sm rounded border mb-4" id="accordionAraudiaOrokorra">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingOrokorra">
+                        <button class="accordion-button collapsed fs-4 fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOrokorra" aria-expanded="false" aria-controls="collapseOrokorra">
+                            ZEHZAPEN OROKORRAK / EHUko GRAL Arautegi Orokorra - Laburpena
+                        </button>
+                    </h2>
+                    <div id="collapseOrokorra" class="accordion-collapse collapse" aria-labelledby="headingOrokorra">
+                        <div class="accordion-body px-4 pb-4">
+
+                            <!-- 1. Izaera eta Baldintza Orokorrak -->
+                            <h5 class="fw-bold mt-3 mb-2">1. Izaera eta Baldintza Orokorrak</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Egiletza:</strong> Bakarkako eta jatorrizko lana da (ikasle bakar baten lana, zuzendari baten edo gehiagoren gidaritzapean).</li>
+                                <li class="mb-2"><strong>Kredituak:</strong> Tituluaren arabera, gutxienez 6 ECTS eta gehienez 24, 30 edo 36 ECTS.</li>
+                                <li class="mb-2"><strong>Defendatzeko baldintza nagusia:</strong> Titulua lortzeko geratzen diren irakasgai guztietan matrikulatuta egotea eta karrera amaierako azken fasean egotea.</li>
+                                <li class="mb-2"><strong>Jabetza Intelektuala:</strong> Eskubideak ikaslearenak dira.</li>
+                                <li class="mb-2"><strong>Derrigorrezko Edukiak:</strong>
+                                    <ul class="ps-3 mt-1">
+                                        <li>Zeharkako gaitasunak eta GJHak: Gutxienez 200 hitzeko gogoeta-atala (balio demokratikoak, giza eskubideak, genero-berdintasuna, irisgarritasuna eta klima-aldaketa/jasangarritasuna).</li>
+                                        <li>Irudi korporatiboa: EHUren erakunde-irudia eta tipografia erabiltzea.</li>
+                                        <li>Hizkera: Hizkera inklusiboa eta genero-ikuspegia erabili behar dira.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- 2. Matrikula eta Deialdiak -->
+                            <h5 class="fw-bold mb-2">2. Matrikula eta Deialdiak</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Matrikula:</strong> Epe orokorrean egiten da, geratzen diren irakasgai guztiak matrikulatuta izanda.</li>
+                                <li class="mb-2"><strong>Deialdiak:</strong> Matrikula bakoitzak ikasturtean 2 deialdi ofizialetarako eskubidea ematen du.</li>
+                                <li class="mb-2"><strong>Akten itxiera:</strong> Urriaren 31 baino lehen jaso behar da kalifikazioa ikaslearen espedientean.</li>
+                            </ul>
+
+                            <!-- 3. Zuzendaritza eta Kanpoko Lanak -->
+                            <h5 class="fw-bold mb-2">3. Zuzendaritza eta Kanpoko Lanak</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Zuzendaria:</strong> Graduan irakasten duen saileko edo ikastegiko irakasle bat.</li>
+                                <li class="mb-2"><strong>Cotutoritza / Kanpoko Lanak:</strong> Lana EHUz kanpoko erakunde batean egiten bada, lankidetza-hitzarmena behar da. EHUko zuzendarikide bat egotea derrigorrezkoa da.</li>
+                                <li class="mb-2"><strong>Isilpekotasuna eta datuak:</strong> Konfidentzialtasun muga juridikoak errespetatu behar dira eta pertsonen datuak erabat anonimo bihurtu behar dira.</li>
+                            </ul>
+
+                            <!-- 4. Ondorio Etikoak -->
+                            <h5 class="fw-bold mb-2">4. Ondorio Etikoak</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Mugak:</strong> Gizakiekin, datu pertsonalekin, animaliekin edo agente biologikoekin egindako lanetan, irakasleak eta ikasleak EHUko Etika Batzordearen jarraibideak bete eta dagozkion dokumentuak aurkeztu behar dituzte.</li>
+                            </ul>
+
+                            <!-- 5. Aurkezpena, Defentsa eta Epaimahaia -->
+                            <h5 class="fw-bold mb-2">5. Aurkezpena, Defentsa eta Epaimahaia</h5>
+                            <ul class="ps-3 mb-4">
+                                <li class="mb-2"><strong>Entregatzea:</strong> Paperean/euskari digitalean edo unibertsitateko gordailu digitalean (ikastegiaren arabera).</li>
+                                <li class="mb-2"><strong>Defentsa:</strong> Publikoa eta aurrez aurrekoa da (Mugikortasunean dauden ikasleak helmugako unibertsitatean defendatu dezakete aldez aurretik adostuz gero).</li>
+                                <li class="mb-2"><strong>Hizkuntza:</strong> Euskaraz edo gaztelaniaz idatzi eta defendatzeko eskubidea bermatzen da (baita graduko beste hizkuntza ofizialetan ere, epaimahaia osatzerik badago). Memoria eta defentsa hizkuntza berean egin behar dira.</li>
+                                <li class="mb-2"><strong>Epaimahaia:</strong> 3 irakasle kide (Lehendakaria, Idazkaria eta Bokala) eta ordezko bat.</li>
+                            </ul>
+
+                            <!-- 6. Kalifikazioa eta Berrikuspena -->
+                            <h5 class="fw-bold mb-2">6. Kalifikazioa eta Berrikuspena</h5>
+                            <ul class="ps-3 mb-0">
+                                <li class="mb-2"><strong>Nota-eskala (0-10, hamartar batekin):</strong>
+                                    <ul class="ps-3 mt-1">
+                                        <li>0 - 4,9: Suspentso (S)</li>
+                                        <li>5,0 - 6,9: Nahikoa (N)</li>
+                                        <li>7,0 - 8,9: Oso Ongi (OO)</li>
+                                        <li>9,0 - 10: Bikain (B)</li>
+                                        <li>--: Aurkezteke (AKF)</li>
+                                    </ul>
+                                </li>
+                                <li class="mb-2"><strong>Ohorezko Matrikula:</strong> Nota &ge; 9,0 duten lanen artean eman daiteke, gehienez defendatutako lanen %5ari.</li>
+                                <li class="mb-2"><strong>Erreklamazioak:</strong> Lehenengo instantzian epaimahai berari eskatzen zaio; ondoren, ikastegiko Erreklamazio Batzordean.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTONES INFORMATIVOS INFERIORES -->
+        <section class="my-5 text-center">
+            <h6 class="fw-bold text-muted mb-3">Informazio gehiagorako hurrengo dokumentuak kontsultatu:</h6>
+            <div class="row g-3 justify-content-center">
+                <div class="col-12 col-md-5">
+                    <a href="https://www.ehu.eus" target="_blank" class="btn btn-site-dark w-100">XEDAPEN OROKORRAK</a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank" class="btn btn-site-dark w-100">INFORMATIKA FAKULTATEAN GrALaren ARAUDIA</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="mt-5 border-top">
+        <div class="footer-header">
+            <a href="about-us.html" class="text-white text-decoration-none">ABOUT US</a>
+        </div>
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="UPV/EHU Logo">
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-start small">
+                    <p class="mb-1"><strong>Helbidea:</strong> Manuel Lardizabal pasealekua, 1, 20018 Donostia / San Sebastián, Gipuzkoa</p>
+                    <p class="mb-1"><strong>Herrialdea:</strong> Gipuzkoa</p>
+                    <p class="mb-1"><strong>Telefonoa:</strong> 943 01 52 45</p>
+                    <p class="mb-0"><strong>Web gunea:</strong> <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank">Informatikako Fakultatea</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

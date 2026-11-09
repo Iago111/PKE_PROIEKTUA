@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKE-GrAL - About us</title>
+
+    <!-- Bootstrap 5 CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Banner Hero de la cabecera */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-header {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold me-4" href="index.html">PKE-GrAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hasiera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="araudia.html">Araudia</a>
+                    </li>
+                    
+                    <!-- Desplegable Aurreko GrAL-k -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Aurreko GrAL-k
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/AurrekoGrALk.html">Aurreko GrAL-k Hasiera</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/konputagailuen-ingeniaritza.html">Konputagailuen ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/software-ingeniaritza.html">Software ingeniaritza</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/poster.html">Poster</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="deialdia-entregak.html">Deialdia eta Entregak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about-us.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <header class="hero-banner">
+        <div class="container py-4">
+            <h1 class="display-3 fw-normal mb-0">About us</h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                
+                <!-- EGILEEN IZEN-ABIZENAK -->
+                <h2 class="fw-bold mb-4">Egileen izen-abizenak:</h2>
+                
+                <ul class="list-unstyled fs-5 mb-5 lh-lg">
+                    <li>Pablo Martínez Añorga</li>
+                    <li>Unai Redondo Navascues</li>
+                    <li>Iago Vazquez Martin</li>
+                </ul>
+
+                <!-- TEXTO INTRODUCTORIO -->
+                <p class="fs-6 text-muted mb-5 px-md-4">
+                    Webgune hau Pablo Martinez Añorga, Unai Redondo Navascues eta Iago Vazquez Martin ikasleok argitaratu dugu. Webgune honen helburua Gradu Amaierako Lanei (GrAL) buruzko informazioa eskaintzea da, horretarako Euskal Herriko Unibertsitateko (UPV/EHU) iturrietatik jasotako datuak erabiliz.
+                </p>
+
+                <!-- GARRANTZITSUA / ERANTZUKIZUN-MUGA -->
+                <h4 class="fw-bold mb-3">Garrantzitsua (Erantzukizun-muga):</h4>
+                
+                <p class="fs-6 text-muted px-md-4">
+                    Webgune hau unibertsitateko eskola-ariketa bat besterik ez da. Bertan agertzen den informazioak ez du inolako asmorik UPV/EHUko iturri ofizialak ordezkatzeko edo horien lekua hartzeko. Egileok, irakasleek eta erabiltzaileek ez dute webgune honetako edukien ondoriozko inolako erantzukizun legalik izango; norberaren ardura salbu geratzen da kasu guztietan.
+                </p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="mt-5 border-top">
+        <div class="footer-header">
+            <a href="about-us.html" class="text-white text-decoration-none">ABOUT US</a>
+        </div>
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="UPV/EHU Logo">
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-start small">
+                    <p class="mb-1"><strong>Helbidea:</strong> Manuel Lardizabal pasealekua, 1, 20018 Donostia / San Sebastián, Gipuzkoa</p>
+                    <p class="mb-1"><strong>Herrialdea:</strong> Gipuzkoa</p>
+                    <p class="mb-1"><strong>Telefonoa:</strong> 943 01 52 45</p>
+                    <p class="mb-0"><strong>Web gunea:</strong> <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank">Informatikako Fakultatea</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
