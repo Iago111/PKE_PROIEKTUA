@@ -49,11 +49,21 @@
             color: #ffffff;
         }
 
+        /* Estilos del Minitest */
         .form-card {
             background-color: #ffffff;
             border: 1px solid #dadce0;
+            border-top: 6px solid #2b2b2b;
             border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .question-block {
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            background-color: #fafafa;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .footer-header {
@@ -84,7 +94,7 @@
                         <a class="nav-link" href="araudia.html">Araudia</a>
                     </li>
                     
-                    <!-- Desplegable Aurreko GrAL-k conectando a la subcarpeta aurrekoUrtekoGrALk -->
+                    <!-- Desplegable Aurreko GrAL-k -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Aurreko GrAL-k
@@ -92,7 +102,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/AurrekoGrALk.html">Aurreko GrAL-k Hasiera</a></li>
                             <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/konputagailuen-ingeniaritza.html">Konputagailuen ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/konputazioa.html">Konputazioa</a></li>
                             <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/software-ingeniaritza.html">Software ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/adimen-artifiziala.html">Adimen artifiziala</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="aurrekoUrtekoGrALk/poster.html">Poster</a></li>
                         </ul>
@@ -130,7 +142,7 @@
                 <li class="mb-1"><a href="#araudia" class="fw-bold text-uppercase">ARAUDIA</a></li>
                 <li class="mb-1"><a href="#entregak" class="fw-bold text-uppercase">ENTREGAK ETA DEIALDIAK</a></li>
                 <li class="mb-1"><a href="#aurrekoak" class="fw-bold text-uppercase">AURREKO GRAL-K</a></li>
-                <li class="mb-1"><a href="#galdetegia" class="fw-bold text-uppercase">AUTOEBALUAZIO GALDETEGIA</a></li>
+                <li class="mb-1"><a href="#galdetegia" class="fw-bold text-uppercase">AUTOEBALUAZIO MINITESTA</a></li>
             </ul>
         </section>
 
@@ -171,9 +183,9 @@
                     </ul>
                     <p class="fw-bold mb-1">Laguntza eta gidak:</p>
                     <ul class="ps-3">
-                        <li><a href="#">Gradu Amaierako Lana egiteko materialak</a></li>
-                        <li><a href="#">Nola egin lan akademiko bat</a></li>
-                        <li><a href="#">Unibertsitate Liburutegiak eskaintzen dituen GrAL ikasleentzako prestakuntza ikastaroak</a></li>
+                        <li><a href="araudia.html">Gradu Amaierako Lana egiteko materialak</a></li>
+                        <li><a href="araudia.html">Nola egin lan akademiko bat</a></li>
+                        <li><a href="araudia.html">Unibertsitate Liburutegiak eskaintzen dituen GrAL ikasleentzako prestakuntza ikastaroak</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-5 order-1 order-md-2">
@@ -184,7 +196,7 @@
 
         <hr class="my-5">
 
-        <!-- SECCIÓN: ARAUDIA CON ENLACE DIRECTO A araudia.html -->
+        <!-- SECCIÓN: ARAUDIA -->
         <section id="araudia" class="row align-items-center my-5 text-center text-md-start">
             <div class="col-12 col-md-4 text-center">
                 <i class="bi bi-gavel text-secondary display-1"></i>
@@ -217,72 +229,128 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: AUTOEBALUAZIO GALDETEGIA -->
+        <hr class="my-5">
+
+        <!-- SECCIÓN: MINITEST INTERACTIVO DE 5 PREGUNTAS -->
         <section id="galdetegia" class="my-5">
-            <div class="text-center max-w-700 mx-auto mb-4">
-                <h3 class="fw-light text-uppercase mb-3">AUTOEBALUAZIO GALDETEGIA</h3>
-                <p class="text-muted small">Formulario honen bidez, Gradu Amaierako Lanaren webgunearen ulermena eta erabilgarritasuna ebaluatu nahi ditugu. Zure erantzunek webguneko informazioa argia eta ulerterraza den aztertzen eta, behar izanez gero, hobekuntzak proposatzen lagunduko digute.</p>
+            <div class="text-center mb-4">
+                <h3 class="fw-bold text-uppercase mb-2">AUTOEBALUAZIO MINITESTA</h3>
+                <p class="text-muted small mx-auto" style="max-width: 680px;">
+                    Egiaztatu zenbat dakizun Gradu Amaierako Lanaren (GrAL) araudiari eta prozedurari buruz 5 galderako minitest honen bidez.
+                </p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6">
-                    <div class="form-card p-4">
-                        <h4 class="fw-normal mb-3">Ulermena autoebaluatzeko galdetegia</h4>
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="form-card p-4 p-md-5">
+                        <h4 class="fw-bold mb-1">GrALari buruzko ezagutza-testa</h4>
+                        <p class="text-muted small mb-4">Aukeratu erantzun zuzena galdera bakoitzean eta sakatu <strong>"Zuzendu testa"</strong> zure emaitza ikusteko.</p>
                         
-                        <form>
-                            <div class="mb-4">
-                                <label class="form-label fw-semibold">Nola baloratuke zenuke webgunea?</label>
-                                <div class="d-flex justify-content-between px-2 mt-2">
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_1" value="1">
-                                        <label class="form-check-label small" for="q1_1">1</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_2" value="2">
-                                        <label class="form-check-label small" for="q1_2">2</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_3" value="3">
-                                        <label class="form-check-label small" for="q1_3">3</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_4" value="4">
-                                        <label class="form-check-label small" for="q1_4">4</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q1" id="q1_5" value="5">
-                                        <label class="form-check-label small" for="q1_5">5</label>
-                                    </div>
+                        <form id="gralMinitestForm">
+
+                            <!-- Pregunta 1 -->
+                            <div class="question-block mb-4" id="block-q1">
+                                <p class="fw-bold mb-2">1. Gutxienez zenbat kreditu izan behar dira gaindituta GrALa esleitu ahal izateko?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1a" value="120">
+                                    <label class="form-check-label" for="q1a">120 kreditu</label>
                                 </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1b" value="168">
+                                    <label class="form-check-label" for="q1b">168 kreditu</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1c" value="210">
+                                    <label class="form-check-label" for="q1c">210 kreditu</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q1"></div>
                             </div>
 
-                            <div class="mb-4">
-                                <label class="form-label fw-semibold">Erraza egin zaizu webgunean nabigatzea?</label>
-                                <div class="d-flex justify-content-between px-2 mt-2">
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_1" value="1">
-                                        <label class="form-check-label small" for="q2_1">1</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_2" value="2">
-                                        <label class="form-check-label small" for="q2_2">2</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_3" value="3">
-                                        <label class="form-check-label small" for="q2_3">3</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_4" value="4">
-                                        <label class="form-check-label small" for="q2_4">4</label>
-                                    </div>
-                                    <div class="text-center">
-                                        <input class="form-check-input d-block mx-auto mb-1" type="radio" name="q2" id="q2_5" value="5">
-                                        <label class="form-check-label small" for="q2_5">5</label>
-                                    </div>
+                            <!-- Pregunta 2 -->
+                            <div class="question-block mb-4" id="block-q2">
+                                <p class="fw-bold mb-2">2. Zenbat deialdi ofizialetarako eskubidea ematen du matrikula bakoitzak ikasturte berean?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2a" value="1">
+                                    <label class="form-check-label" for="q2a">Deialdi 1 bakarrik</label>
                                 </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2b" value="2">
+                                    <label class="form-check-label" for="q2b">2 deialdi ofizial</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" id="q2c" value="4">
+                                    <label class="form-check-label" for="q2c">4 deialdi ofizial</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q2"></div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary rounded px-4">Bidali</button>
+                            <!-- Pregunta 3 -->
+                            <div class="question-block mb-4" id="block-q3">
+                                <p class="fw-bold mb-2">3. Gutxienez zenbat hitzeko gogoeta-atala gehitu behar da memorian GJH (Garapen Jasangarrirako Helburuak) eta etikari buruz?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3a" value="100">
+                                    <label class="form-check-label" for="q3a">Gutxienez 100 hitz</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3b" value="200">
+                                    <label class="form-check-label" for="q3b">Gutxienez 200 hitz</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" id="q3c" value="500">
+                                    <label class="form-check-label" for="q3c">Gutxienez 500 hitz</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q3"></div>
+                            </div>
+
+                            <!-- Pregunta 4 -->
+                            <div class="question-block mb-4" id="block-q4">
+                                <p class="fw-bold mb-2">4. Non entregatu behar da GrALaren memoria modu digitalean?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4a" value="egela">
+                                    <label class="form-check-label" for="q4a">eGela plataforman</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4b" value="addi">
+                                    <label class="form-check-label" for="q4b">ADDI gordailu instituzionalean</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q4" id="q4c" value="email">
+                                    <label class="form-check-label" for="q4c">Posta elektronikoz zuzendariari soilik</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q4"></div>
+                            </div>
+
+                            <!-- Pregunta 5 -->
+                            <div class="question-block mb-4" id="block-q5">
+                                <p class="fw-bold mb-2">5. Zenbat irakasle kidek osatzen dute GrALa ebaluatzeko epaimahaia?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5a" value="2">
+                                    <label class="form-check-label" for="q5a">2 irakaslek</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5b" value="3">
+                                    <label class="form-check-label" for="q5b">3 irakaslek (Lehendakaria, Idazkaria eta Kidea)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5c" value="5">
+                                    <label class="form-check-label" for="q5c">5 irakaslek</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q5"></div>
+                            </div>
+
+                            <!-- Botones de acción -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" id="btnCorregir" class="btn btn-site-dark px-4">
+                                    <i class="bi bi-check2-circle me-1"></i> Zuzendu testa
+                                </button>
+                                <button type="button" id="btnReiniciar" class="btn btn-outline-secondary px-4">
+                                    <i class="bi bi-arrow-counterclockwise me-1"></i> Berriz hasi
+                                </button>
+                            </div>
+
+                            <!-- Caja de resultado global -->
+                            <div id="testResultBox" class="alert mt-4 d-none" role="alert"></div>
+
                         </form>
                     </div>
                 </div>
@@ -299,7 +367,7 @@
         <div class="container py-4">
             <div class="row align-items-center g-4">
                 <div class="col-12 col-md-4 text-center">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSznUfhhFv22Zl9vEBqTH_41mtO6iD3fQ0J_lD-IQPACg&s=10" style="max-width: 220px;" alt="UPV/EHU Logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="UPV/EHU Logo">
                 </div>
                 <div class="col-12 col-md-4 text-center">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
@@ -316,5 +384,67 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lógica JavaScript del Minitest -->
+    <script>
+        document.getElementById('btnCorregir').addEventListener('click', function () {
+            const respuestasCorrectas = {
+                q1: { valor: '168', texto: 'Zuzena! Gutxienez 168 kreditu gaindituta egon behar dira.' },
+                q2: { valor: '2', texto: 'Zuzena! Ikasturte bakoitzean 2 deialdi ofizial daude.' },
+                q3: { valor: '200', texto: 'Zuzena! Gutxienez 200 hitzeko gogoeta-atala behar da.' },
+                q4: { valor: 'addi', texto: 'Zuzena! Memoria ADDI gordailu digitalean entregatzen da.' },
+                q5: { valor: '3', texto: 'Zuzena! Epaimahaia 3 irakaslek osatzen dute.' }
+            };
+
+            let puntuacion = 0;
+            const total = 5;
+
+            for (let key in respuestasCorrectas) {
+                const seleccionada = document.querySelector(`input[name="${key}"]:checked`);
+                const bloque = document.getElementById(`block-${key}`);
+                const feedback = document.getElementById(`fb-${key}`);
+
+                // Limpiar estados previos
+                bloque.classList.remove('border-success', 'bg-success-subtle', 'border-danger', 'bg-danger-subtle');
+
+                if (seleccionada && seleccionada.value === respuestasCorrectas[key].valor) {
+                    puntuacion++;
+                    bloque.classList.add('border-success', 'bg-success-subtle');
+                    feedback.className = 'feedback small fw-semibold mt-2 text-success';
+                    feedback.innerHTML = `<i class="bi bi-check-circle-fill me-1"></i> ${respuestasCorrectas[key].texto}`;
+                } else {
+                    bloque.classList.add('border-danger', 'bg-danger-subtle');
+                    feedback.className = 'feedback small fw-semibold mt-2 text-danger';
+                    feedback.innerHTML = `<i class="bi bi-x-circle-fill me-1"></i> Okerra. ${respuestasCorrectas[key].texto}`;
+                }
+            }
+
+            const resultBox = document.getElementById('testResultBox');
+            resultBox.classList.remove('d-none', 'alert-success', 'alert-warning', 'alert-danger');
+
+            if (puntuacion === 5) {
+                resultBox.classList.add('alert-success');
+                resultBox.innerHTML = `<strong>Bikain! (${puntuacion}/${total})</strong> GrALaren araudia primeran ezagutzen duzu!`;
+            } else if (puntuacion >= 3) {
+                resultBox.classList.add('alert-warning');
+                resultBox.innerHTML = `<strong>Oso ongi! (${puntuacion}/${total})</strong> Galdera gehienak asmatu dituzu.`;
+            } else {
+                resultBox.classList.add('alert-danger');
+                resultBox.innerHTML = `<strong>Saiatu berriro (${puntuacion}/${total})</strong> Irakurri webguneko informazioa eta saiatu berriz.`;
+            }
+        });
+
+        document.getElementById('btnReiniciar').addEventListener('click', function () {
+            document.getElementById('gralMinitestForm').reset();
+            const preguntas = ['q1', 'q2', 'q3', 'q4', 'q5'];
+            preguntas.forEach(key => {
+                const bloque = document.getElementById(`block-${key}`);
+                const feedback = document.getElementById(`fb-${key}`);
+                bloque.classList.remove('border-success', 'bg-success-subtle', 'border-danger', 'bg-danger-subtle');
+                feedback.innerHTML = '';
+            });
+            document.getElementById('testResultBox').classList.add('d-none');
+        });
+    </script>
 </body>
 </html>
