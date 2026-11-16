@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKE-GrAL - Adimen artifiziala</title>
+
+    <!-- Bootstrap 5 CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Banner Hero Superior */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                        url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Contenedor estilo portada de memoria UPV/EHU */
+        .doc-preview-box {
+            background-color: #ffffff;
+            border: 2px solid #2b2b2b;
+            border-radius: 6px;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            padding: 22px 20px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        .doc-preview-box:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Botón oscuro estilo Google Sites */
+        .btn-site-dark {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-weight: 500;
+            border-radius: 4px;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-site-dark:hover {
+            background-color: #404040;
+            color: #ffffff;
+        }
+
+        .footer-header {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (Rutas ajustadas con ../ por estar en subcarpeta) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold me-4" href="../index.html">PKE-GrAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Hasiera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../araudia.html">Araudia</a>
+                    </li>
+                    
+                    <!-- Desplegable Aurreko GrAL-k -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Aurreko GrAL-k
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="AurrekoGrALk.html">Aurreko GrAL-k Hasiera</a></li>
+                            <li><a class="dropdown-item" href="konputagailuen-ingeniaritza.html">Konputagailuen ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="konputazioa.html">Konputazioa</a></li>
+                            <li><a class="dropdown-item" href="software-ingeniaritza.html">Software ingeniaritza</a></li>
+                            <li><a class="dropdown-item active" href="adimen-artifiziala.html">Adimen artifiziala</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="poster.html">Poster</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../deialdia-entregak.html">Deialdia eta Entregak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about-us.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <header class="hero-banner">
+        <div class="container py-4">
+            <h1 class="display-3 fw-normal mb-0">Adimen artifiziala</h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- TÍTULO DE SECCIÓN -->
+        <h2 class="text-center fw-bold text-uppercase mb-5">ADIBIDEAK</h2>
+
+        <!-- REJILLA 2x2 DE TRABAJOS DE EJEMPLO (col-12 en móvil / col-md-6 en ordenador) -->
+        <section class="row g-5 mb-5">
+
+            <!-- Trabajo 1 -->
+            <div class="col-12 col-md-6">
+                <div class="doc-preview-box shadow-sm mb-3">
+                    <div class="small text-muted text-uppercase">Trabajo de Fin de Grado &middot; Grado en Inteligencia Artificial</div>
+                    <h6 class="fw-bold px-2 my-2">Adaptación de Modelos de Lenguaje para la generación de poesía métrica</h6>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-dark btn-sm px-4">
+                        <i class="bi bi-file-earmark-pdf text-danger me-1"></i> Memoria ikusi (PDF)
+                    </a>
+                </div>
+                <p class="mb-1"><strong>Izenburua:</strong> Adaptación de Modelos de Lenguaje para la generación de poesía métrica</p>
+                <p class="mb-1"><strong>Egilea:</strong> Unai Ruiz Moreno</p>
+                <p class="mb-0 text-muted"><strong>Urtea:</strong> 2025</p>
+            </div>
+
+            <!-- Trabajo 2 -->
+            <div class="col-12 col-md-6">
+                <div class="doc-preview-box shadow-sm mb-3">
+                    <div class="small text-muted text-uppercase">Bachelor Thesis &middot; Artificial Intelligence</div>
+                    <h6 class="fw-bold px-2 my-2">Transformer-driven suicide ideation detection on Spanish social media posts</h6>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-dark btn-sm px-4">
+                        <i class="bi bi-file-earmark-pdf text-danger me-1"></i> Memoria ikusi (PDF)
+                    </a>
+                </div>
+                <p class="mb-1"><strong>Izenburua:</strong> Transformer-driven suicide ideation detection on Spanish social media posts</p>
+                <p class="mb-1"><strong>Egilea:</strong> Geming Wu</p>
+                <p class="mb-0 text-muted"><strong>Urtea:</strong> 2025</p>
+            </div>
+
+            <!-- Trabajo 3 -->
+            <div class="col-12 col-md-6">
+                <div class="doc-preview-box shadow-sm mb-3">
+                    <div class="small text-muted text-uppercase">Trabajo de Fin de Grado &middot; Grado en Inteligencia Artificial</div>
+                    <h6 class="fw-bold px-2 my-2">Enfoque basado en Aprendizaje por Refuerzo para la Optimización de Rutas de Vehículos en Pelotón en la Última Milla</h6>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-dark btn-sm px-4">
+                        <i class="bi bi-file-earmark-pdf text-danger me-1"></i> Memoria ikusi (PDF)
+                    </a>
+                </div>
+                <p class="mb-1"><strong>Izenburua:</strong> Enfoque basado en Aprendizaje por Refuerzo para la Optimización de Rutas de Vehículos en Pelotón en la Última Milla</p>
+                <p class="mb-1"><strong>Egilea:</strong> Nagore Bravo Julián</p>
+                <p class="mb-0 text-muted"><strong>Urtea:</strong> 2024</p>
+            </div>
+
+            <!-- Trabajo 4 -->
+            <div class="col-12 col-md-6">
+                <div class="doc-preview-box shadow-sm mb-3">
+                    <div class="small text-muted text-uppercase">Gradu Amaierako Lana &middot; Adimen Artifizialeko Gradua</div>
+                    <h6 class="fw-bold px-2 my-2">Ikerketarako datu sintetikoak: Irudi medikoen sorkuntza eta sailkapena adimen artifiziala erabiliz</h6>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-dark btn-sm px-4">
+                        <i class="bi bi-file-earmark-pdf text-danger me-1"></i> Memoria ikusi (PDF)
+                    </a>
+                </div>
+                <p class="mb-1"><strong>Izenburua:</strong> Ikerketarako datu sintetikoak: Irudi medikoen sorkuntza eta sailkapena adimen artifiziala erabiliz</p>
+                <p class="mb-1"><strong>Egilea:</strong> Iñaki Ruiz de Erentxun Etxebeste</p>
+                <p class="mb-0 text-muted"><strong>Urtea:</strong> 2025</p>
+            </div>
+
+        </section>
+
+        <hr class="my-4">
+
+        <!-- BOTÓN INFERIOR: ADIBIDE GEHIGARRIAK -->
+        <section class="row justify-content-center my-4">
+            <div class="col-12 col-md-10">
+                <a href="https://addi.ehu.es/handle/10810/14161" target="_blank" class="btn btn-site-dark">
+                    Adibide gehigarriak
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="mt-5 border-top">
+        <div class="footer-header">
+            <a href="../about-us.html" class="text-white text-decoration-none">ABOUT US</a>
+        </div>
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="UPV/EHU Logo">
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-start small">
+                    <p class="mb-1"><strong>Helbidea:</strong> Manuel Lardizabal pasealekua, 1, 20018 Donostia / San Sebastián, Gipuzkoa</p>
+                    <p class="mb-1"><strong>Herrialdea:</strong> Gipuzkoa</p>
+                    <p class="mb-1"><strong>Telefonoa:</strong> 943 01 52 45</p>
+                    <p class="mb-0"><strong>Web gunea:</strong> <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank">Informatikako Fakultatea</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

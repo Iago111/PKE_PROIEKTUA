@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKE-GrAL - Poster</title>
+
+    <!-- Bootstrap 5 CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Banner Hero Superior */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                        url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Contenedor estilo visor de póster (A3 vertical) */
+        .poster-preview-box {
+            background-color: #212529;
+            color: #ffffff;
+            border-radius: 6px;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            position: relative;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .poster-preview-box:hover {
+            background-color: #2c3034;
+        }
+
+        /* Botón oscuro estilo Google Sites */
+        .btn-site-dark {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-weight: 500;
+            border-radius: 4px;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-site-dark:hover {
+            background-color: #404040;
+            color: #ffffff;
+        }
+
+        .footer-header {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (Rutas ajustadas con ../ por estar en subcarpeta) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold me-4" href="../index.html">PKE-GrAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Hasiera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../araudia.html">Araudia</a>
+                    </li>
+                    
+                    <!-- Desplegable Aurreko GrAL-k -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Aurreko GrAL-k
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="AurrekoGrALk.html">Aurreko GrAL-k Hasiera</a></li>
+                            <li><a class="dropdown-item" href="konputagailuen-ingeniaritza.html">Konputagailuen ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="konputazioa.html">Konputazioa</a></li>
+                            <li><a class="dropdown-item" href="software-ingeniaritza.html">Software ingeniaritza</a></li>
+                            <li><a class="dropdown-item" href="adimen-artifiziala.html">Adimen artifiziala</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item active" href="poster.html">Poster</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../deialdia-entregak.html">Deialdia eta Entregak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about-us.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <header class="hero-banner">
+        <div class="container py-4">
+            <h1 class="display-3 fw-normal mb-0">Poster</h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- TEXTO EXPLICATIVO SUPERIOR -->
+        <section class="mb-5 px-md-4">
+            <p class="fs-6 lh-base text-muted">
+                Memoriarekin batera ikasleak bere lanaren poster bat prestatu ahalko du. Posterrak bere lanaren laburpena jasoko du; lanaren izenburua eta ikaslearen izen abizenak agertuko dira posterrean, baita EHUren logoa ere. Gainontzean ikaslearen esku geratuko da posterraren diseinua. Posterra <strong>dif.gral@ehu.eus</strong> helbidera bidaliko da PDF formatuan eta <em>AbizenaIzena.pdf</em> itxurako izenarekin, A3 formatuan eta bertikalean.
+            </p>
+        </section>
+
+        <!-- TÍTULO DE SECCIÓN -->
+        <h2 class="text-center fw-bold text-uppercase mb-5">ADIBIDEAK</h2>
+
+        <!-- REJILLA 2x2 DE PÓSTERES DE EJEMPLO (col-12 en móvil / col-md-6 en ordenador) -->
+        <section class="row g-5 mb-5">
+
+            <!-- Poster 1 -->
+            <div class="col-12 col-md-6">
+                <div class="poster-preview-box shadow-sm mb-3">
+                    <i class="bi bi-file-earmark-easel text-warning display-2 mb-3"></i>
+                    <h6 class="fw-bold text-uppercase px-3">BENCHMARKING THE PERFORMANCE AND ENERGY CONSUMPTION OF THE AVX512 AND VNNI INSTRUCTION SETS</h6>
+                    <span class="badge bg-secondary mt-2 mb-3">PDF &middot; A3 Bertikala</span>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-light btn-sm px-4">Posterra ikusi</a>
+                </div>
+                <p class="mb-1"><strong>Titulua:</strong> BENCHMARKING THE PERFOMANCE AND ENERGY CONSUMPTION OF THE AVX512 AND VNNI INTRUCTION SETS</p>
+                <p class="mb-1"><strong>Hizkuntza:</strong> Ingelesa</p>
+                <p class="mb-0 text-muted"><strong>Egilea:</strong> Jon Arriaran Cancho</p>
+            </div>
+
+            <!-- Poster 2 -->
+            <div class="col-12 col-md-6">
+                <div class="poster-preview-box shadow-sm mb-3" style="background-color: #1a3a5c;">
+                    <i class="bi bi-file-earmark-easel text-info display-2 mb-3"></i>
+                    <h6 class="fw-bold text-uppercase px-3">Minimeteo: Atmega328p mikrokontroladorean oinarritutako estazio meteorologikoa</h6>
+                    <span class="badge bg-info text-dark mt-2 mb-3">PDF &middot; A3 Bertikala</span>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-light btn-sm px-4">Posterra ikusi</a>
+                </div>
+                <p class="mb-1"><strong>Titulua:</strong> ATmega328p MIKROKONTROLADOREAN OINARRITUTAKO ESTAZIO METEOROLOGIKOA</p>
+                <p class="mb-1"><strong>Hizkuntza:</strong> Euskera</p>
+                <p class="mb-0 text-muted"><strong>Egilea:</strong> Unai Fernandez Urroz</p>
+            </div>
+
+            <!-- Poster 3 -->
+            <div class="col-12 col-md-6">
+                <div class="poster-preview-box shadow-sm mb-3" style="background-color: #2b4c65;">
+                    <i class="bi bi-file-earmark-easel text-light display-2 mb-3"></i>
+                    <h6 class="fw-bold text-uppercase px-3">Detecting attention objects in the wild with Pepper</h6>
+                    <span class="badge bg-light text-dark mt-2 mb-3">PDF &middot; A3 Bertikala</span>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-light btn-sm px-4">Posterra ikusi</a>
+                </div>
+                <p class="mb-1"><strong>Titulua:</strong> DETECTING ATTENTION OBJECTS IN THE WILD WITH PEPPER</p>
+                <p class="mb-1"><strong>Hizkuntza:</strong> Ingelesa</p>
+                <p class="mb-0 text-muted"><strong>Egilea:</strong> Miren Samaniego</p>
+            </div>
+
+            <!-- Poster 4 -->
+            <div class="col-12 col-md-6">
+                <div class="poster-preview-box shadow-sm mb-3" style="background-color: #16323d;">
+                    <i class="bi bi-file-earmark-easel text-success display-2 mb-3"></i>
+                    <h6 class="fw-bold text-uppercase px-3">UTILIZACIÓN DE ALGORITMOS DE ESTIMACIÓN DE DISTRIBUCIONES PARA OPTIMIZAR ATAQUES DE CANAL LATERAL</h6>
+                    <span class="badge bg-success mt-2 mb-3">PDF &middot; A3 Bertikala</span>
+                    <a href="https://addi.ehu.es" target="_blank" class="btn btn-outline-light btn-sm px-4">Posterra ikusi</a>
+                </div>
+                <p class="mb-1"><strong>Titulua:</strong> UTILIZACION DE ALGORITMOS DE ESTIMACIÓN DE DISTRIBUCIONES PARA OPTIMIZAR ATAQUES DE CANAL LATERAL</p>
+                <p class="mb-1"><strong>Hizkuntza:</strong> Gaztelera</p>
+                <p class="mb-0 text-muted"><strong>Egilea:</strong> Asier Insausti Carmona</p>
+            </div>
+
+        </section>
+
+        <hr class="my-4">
+
+        <!-- BOTÓN INFERIOR: ADIBIDE GEHIGARRIAK -->
+        <section class="row justify-content-center my-4">
+            <div class="col-12 col-md-10">
+                <a href="https://addi.ehu.es/handle/10810/14161" target="_blank" class="btn btn-site-dark">
+                    Adibide gehigarriak
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="mt-5 border-top">
+        <div class="footer-header">
+            <a href="../about-us.html" class="text-white text-decoration-none">ABOUT US</a>
+        </div>
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-4 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="UPV/EHU Logo">
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-start small">
+                    <p class="mb-1"><strong>Helbidea:</strong> Manuel Lardizabal pasealekua, 1, 20018 Donostia / San Sebastián, Gipuzkoa</p>
+                    <p class="mb-1"><strong>Herrialdea:</strong> Gipuzkoa</p>
+                    <p class="mb-1"><strong>Telefonoa:</strong> 943 01 52 45</p>
+                    <p class="mb-0"><strong>Web gunea:</strong> <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank">Informatikako Fakultatea</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
