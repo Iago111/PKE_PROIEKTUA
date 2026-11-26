@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #ffffff;
@@ -28,13 +31,39 @@
             text-align: center;
         }
 
-        .quick-nav-list a {
-            color: #333;
-            text-decoration: underline;
-            font-size: 0.95rem;
+        /* Tarjetas numeradas del índice rápido */
+        .step-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            transition: all 0.2s ease;
         }
-        .quick-nav-list a:hover {
-            color: #0d6efd;
+        .step-card:hover {
+            border-color: #2b2b2b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            color: inherit;
+        }
+        .step-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-anchor {
+            scroll-margin-top: 85px;
         }
 
         .btn-site-dark {
@@ -42,7 +71,7 @@
             color: #ffffff;
             font-weight: 500;
             border-radius: 4px;
-            padding: 8px 24px;
+            padding: 10px 24px;
         }
         .btn-site-dark:hover {
             background-color: #404040;
@@ -59,7 +88,7 @@
         }
 
         .question-block {
-            padding: 15px;
+            padding: 16px;
             border-radius: 6px;
             border: 1px solid #e9ecef;
             background-color: #fafafa;
@@ -79,10 +108,10 @@
 <body>
 
     <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3" aria-label="Nabigazio nagusia">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold me-4" href="index.html">PKE-GrAL</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Ireki nabigazio menua">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
@@ -96,7 +125,7 @@
                     
                     <!-- Desplegable Aurreko GrAL-k -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Aurreko urteetako GrALen kategoria menua">
                             Aurreko GrAL-k
                         </a>
                         <ul class="dropdown-menu">
@@ -122,42 +151,77 @@
     </nav>
 
     <!-- HEADER / BANNER SUPERIOR -->
-    <header class="hero-banner">
+    <header class="hero-banner" id="top">
         <div class="container py-4">
-            <h1 class="display-4 fw-normal mb-0">GrALei buruzko infomazioa<br><small class="fs-2">(UPV/EHU)</small></h1>
+            <h1 class="display-4 fw-normal mb-0">GrALei buruzko informazioa<br><small class="fs-2">(UPV/EHU)</small></h1>
         </div>
     </header>
 
     <main class="container my-5">
 
-        <!-- ÍNDICE INTERNO DE LA PÁGINA -->
-        <section class="mb-5 ms-md-3 quick-nav-list">
-            <ul class="list-unstyled">
-                <li class="mb-1"><a href="#orokorra" class="fw-bold text-uppercase">INFORMAZIO OROKORRA</a></li>
-                <ul class="list-unstyled ms-4 mb-2">
-                    <li><a href="#esleipena">GrALaren esleipena GAURen</a></li>
-                    <li><a href="#matrikula">GrALaren matrikula</a></li>
-                    <li><a href="#gauzatzea">GrALaren gauzatzea</a></li>
-                </ul>
-                <li class="mb-1"><a href="#araudia" class="fw-bold text-uppercase">ARAUDIA</a></li>
-                <li class="mb-1"><a href="#entregak" class="fw-bold text-uppercase">ENTREGAK ETA DEIALDIAK</a></li>
-                <li class="mb-1"><a href="#aurrekoak" class="fw-bold text-uppercase">AURREKO GRAL-K</a></li>
-                <li class="mb-1"><a href="#galdetegia" class="fw-bold text-uppercase">AUTOEBALUAZIO MINITESTA</a></li>
-            </ul>
-        </section>
+        <!-- ÍNDICE DE ACCESO RÁPIDO (5 TARJETAS) -->
+        <nav class="mb-5" aria-label="Orriaren aurkibide azkarra">
+            <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-5">
+                <div class="col">
+                    <a href="#esleipena" class="step-card">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="step-badge">1</span>
+                            <span class="fw-bold small text-uppercase">Esleipena</span>
+                        </div>
+                        <p class="small text-muted mb-0">168 kreditu eta eskaera GAURen.</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#matrikula" class="step-card">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="step-badge">2</span>
+                            <span class="fw-bold small text-uppercase">Matrikula</span>
+                        </div>
+                        <p class="small text-muted mb-0">Gehienez 18 kreditu gainditu gabe.</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#gauzatzea" class="step-card">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="step-badge">3</span>
+                            <span class="fw-bold small text-uppercase">Memoria</span>
+                        </div>
+                        <p class="small text-muted mb-0">GJH gogoeta (200 hitz) eta egitura.</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#entregak" class="step-card">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="step-badge">4</span>
+                            <span class="fw-bold small text-uppercase">Defentsa</span>
+                        </div>
+                        <p class="small text-muted mb-0">ADDI entrega, deialdiak eta epaimahaia.</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#galdetegia" class="step-card border-primary">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="step-badge bg-primary"><i class="bi bi-check-lg"></i></span>
+                            <span class="fw-bold small text-uppercase text-primary">Minitesta</span>
+                        </div>
+                        <p class="small text-muted mb-0">Probatu zure ezagutzak 10 galderarekin.</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
 
         <!-- SECCIÓN: INFORMAZIO OROKORRA -->
-        <section id="orokorra" class="mb-5">
+        <section id="orokorra" class="mb-5 section-anchor">
             <h2 class="text-center fw-bold mb-4 text-uppercase">INFORMAZIO OROKORRA</h2>
             
-            <div id="esleipena" class="mb-4">
+            <div id="esleipena" class="mb-4 section-anchor">
                 <h4 class="fw-bold">GrALaren esleipena GAURen</h4>
                 <p class="mb-1"><strong>Baldintzak:</strong> Gutxienez 168 kreditu gaindituta egon behar dira.</p>
                 <p class="mb-1"><strong>Izena ematea:</strong> GAUR aplikazioaren bidez egin behar da (<em>Gradu Amaierako Lana-Master Amaierako Lana</em> atalean).</p>
             </div>
 
             <!-- MATRIKULA -->
-            <div id="matrikula" class="row align-items-center my-4 g-4">
+            <div id="matrikula" class="row align-items-center my-4 g-4 section-anchor">
                 <div class="col-12 col-md-5">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded shadow-sm" alt="GrALaren matrikula">
                 </div>
@@ -172,7 +236,7 @@
             </div>
 
             <!-- GAUZATZEA -->
-            <div id="gauzatzea" class="row align-items-center my-4 g-4">
+            <div id="gauzatzea" class="row align-items-center my-4 g-4 section-anchor">
                 <div class="col-12 col-md-7 order-2 order-md-1">
                     <h4 class="fw-bold mb-3">GrALaren gauzatzea</h4>
                     <p><strong>Helburua:</strong> Graduan lortutako gaitasunak sendotzea eta aplikatzea da, arloarekin lotutako arazo bati konponbidea diseinatuz eta inplementatuz.</p>
@@ -197,7 +261,7 @@
         <hr class="my-5">
 
         <!-- SECCIÓN: ARAUDIA -->
-        <section id="araudia" class="row align-items-center my-5 text-center text-md-start">
+        <section id="araudia" class="row align-items-center my-5 text-center text-md-start section-anchor">
             <div class="col-12 col-md-4 text-center">
                 <i class="bi bi-gavel text-secondary display-1"></i>
             </div>
@@ -210,7 +274,7 @@
 
         <!-- SECCIÓN: ENTREGAK ETA AURREKO GRAL-K -->
         <section class="row g-4 my-5">
-            <div id="entregak" class="col-12 col-md-6">
+            <div id="entregak" class="col-12 col-md-6 section-anchor">
                 <div class="d-flex flex-column align-items-center text-center p-4 h-100 border-0">
                     <i class="bi bi-calendar-check text-info display-1 mb-3"></i>
                     <h3 class="fw-light text-uppercase">ENTREGAK ETA DEIALDIAK</h3>
@@ -219,7 +283,7 @@
                 </div>
             </div>
 
-            <div id="aurrekoak" class="col-12 col-md-6">
+            <div id="aurrekoak" class="col-12 col-md-6 section-anchor">
                 <div class="d-flex flex-column align-items-center text-center p-4 h-100 border-0">
                     <i class="bi bi-journal-album text-warning display-1 mb-3"></i>
                     <h3 class="fw-light text-uppercase">AURREKO GRAL-K</h3>
@@ -231,25 +295,25 @@
 
         <hr class="my-5">
 
-        <!-- SECCIÓN: MINITEST INTERACTIVO DE 5 PREGUNTAS -->
-        <section id="galdetegia" class="my-5">
+        <!-- SECCIÓN: MINITEST INTERACTIVO DE 10 PREGUNTAS -->
+        <section id="galdetegia" class="my-5 section-anchor">
             <div class="text-center mb-4">
                 <h3 class="fw-bold text-uppercase mb-2">AUTOEBALUAZIO MINITESTA</h3>
                 <p class="text-muted small mx-auto" style="max-width: 680px;">
-                    Egiaztatu zenbat dakizun Gradu Amaierako Lanaren (GrAL) araudiari eta prozedurari buruz 5 galderako minitest honen bidez.
+                    Egiaztatu zenbat dakizun Gradu Amaierako Lanaren (GrAL) araudiari eta prozedurari buruz 10 galderako minitest honen bidez. Galderaren bat huts eginez gero, araudiko atal zehatzera joateko esteka agertuko zaizu.
                 </p>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8">
                     <div class="form-card p-4 p-md-5">
-                        <h4 class="fw-bold mb-1">GrALari buruzko ezagutza-testa</h4>
+                        <h4 class="fw-bold mb-1">GrALari buruzko ezagutza-testa (10 galdera)</h4>
                         <p class="text-muted small mb-4">Aukeratu erantzun zuzena galdera bakoitzean eta sakatu <strong>"Zuzendu testa"</strong> zure emaitza ikusteko.</p>
                         
-                        <form id="gralMinitestForm">
+                        <form id="gralMinitestForm" aria-label="GrAL araudiari buruzko autoebaluazio minitesta">
 
                             <!-- Pregunta 1 -->
-                            <div class="question-block mb-4" id="block-q1">
+                            <div class="question-block mb-4" id="block-q1" role="radiogroup" aria-label="1. galdera">
                                 <p class="fw-bold mb-2">1. Gutxienez zenbat kreditu izan behar dira gaindituta GrALa esleitu ahal izateko?</p>
                                 <div class="form-check mb-1">
                                     <input class="form-check-input" type="radio" name="q1" id="q1a" value="120">
@@ -267,7 +331,7 @@
                             </div>
 
                             <!-- Pregunta 2 -->
-                            <div class="question-block mb-4" id="block-q2">
+                            <div class="question-block mb-4" id="block-q2" role="radiogroup" aria-label="2. galdera">
                                 <p class="fw-bold mb-2">2. Zenbat deialdi ofizialetarako eskubidea ematen du matrikula bakoitzak ikasturte berean?</p>
                                 <div class="form-check mb-1">
                                     <input class="form-check-input" type="radio" name="q2" id="q2a" value="1">
@@ -285,7 +349,7 @@
                             </div>
 
                             <!-- Pregunta 3 -->
-                            <div class="question-block mb-4" id="block-q3">
+                            <div class="question-block mb-4" id="block-q3" role="radiogroup" aria-label="3. galdera">
                                 <p class="fw-bold mb-2">3. Gutxienez zenbat hitzeko gogoeta-atala gehitu behar da memorian GJH (Garapen Jasangarrirako Helburuak) eta etikari buruz?</p>
                                 <div class="form-check mb-1">
                                     <input class="form-check-input" type="radio" name="q3" id="q3a" value="100">
@@ -303,7 +367,7 @@
                             </div>
 
                             <!-- Pregunta 4 -->
-                            <div class="question-block mb-4" id="block-q4">
+                            <div class="question-block mb-4" id="block-q4" role="radiogroup" aria-label="4. galdera">
                                 <p class="fw-bold mb-2">4. Non entregatu behar da GrALaren memoria modu digitalean?</p>
                                 <div class="form-check mb-1">
                                     <input class="form-check-input" type="radio" name="q4" id="q4a" value="egela">
@@ -321,7 +385,7 @@
                             </div>
 
                             <!-- Pregunta 5 -->
-                            <div class="question-block mb-4" id="block-q5">
+                            <div class="question-block mb-4" id="block-q5" role="radiogroup" aria-label="5. galdera">
                                 <p class="fw-bold mb-2">5. Zenbat irakasle kidek osatzen dute GrALa ebaluatzeko epaimahaia?</p>
                                 <div class="form-check mb-1">
                                     <input class="form-check-input" type="radio" name="q5" id="q5a" value="2">
@@ -338,18 +402,104 @@
                                 <div class="feedback small fw-semibold mt-2" id="fb-q5"></div>
                             </div>
 
+                            <!-- Pregunta 6 -->
+                            <div class="question-block mb-4" id="block-q6" role="radiogroup" aria-label="6. galdera">
+                                <p class="fw-bold mb-2">6. Zenbat ECTS kredituko lan-karga du Informatika Fakultateko GrALak?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q6" id="q6a" value="6">
+                                    <label class="form-check-label" for="q6a">6 ECTS</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q6" id="q6b" value="12">
+                                    <label class="form-check-label" for="q6b">12 ECTS</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q6" id="q6c" value="18">
+                                    <label class="form-check-label" for="q6c">18 ECTS</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q6"></div>
+                            </div>
+
+                            <!-- Pregunta 7 -->
+                            <div class="question-block mb-4" id="block-q7" role="radiogroup" aria-label="7. galdera">
+                                <p class="fw-bold mb-2">7. Zenbatekoa da defentsa publikoa egiteko gomendatutako denbora?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q7" id="q7a" value="10">
+                                    <label class="form-check-label" for="q7a">10 minutu</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q7" id="q7b" value="20">
+                                    <label class="form-check-label" for="q7b">20 minutu (gehienez 30 minutu)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q7" id="q7c" value="45">
+                                    <label class="form-check-label" for="q7c">45 minutu</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q7"></div>
+                            </div>
+
+                            <!-- Pregunta 8 -->
+                            <div class="question-block mb-4" id="block-q8" role="radiogroup" aria-label="8. galdera">
+                                <p class="fw-bold mb-2">8. Zenbat orrialde ingurukoa da memoriaren gomendatutako luzera (eranskinak kanpo)?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q8" id="q8a" value="30">
+                                    <label class="form-check-label" for="q8a">30 orrialde inguru</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q8" id="q8b" value="60">
+                                    <label class="form-check-label" for="q8b">60 orrialde inguru</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q8" id="q8c" value="120">
+                                    <label class="form-check-label" for="q8c">120 orrialde inguru</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q8"></div>
+                            </div>
+
+                            <!-- Pregunta 9 -->
+                            <div class="question-block mb-4" id="block-q9" role="radiogroup" aria-label="9. galdera">
+                                <p class="fw-bold mb-2">9. Gutxienez zein kalifikazio behar da Ohorezko Matrikula lortu ahal izateko?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q9" id="q9a" value="8">
+                                    <label class="form-check-label" for="q9a">8,0 edo gehiago</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q9" id="q9b" value="9">
+                                    <label class="form-check-label" for="q9b">9,0 edo gehiago (gehienez ikasleen %5ari)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q9" id="q9c" value="9.5">
+                                    <label class="form-check-label" for="q9c">9,5 edo gehiago</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q9"></div>
+                            </div>
+
+                            <!-- Pregunta 10 -->
+                            <div class="question-block mb-4" id="block-q10" role="radiogroup" aria-label="10. galdera">
+                                <p class="fw-bold mb-2">10. Lana enpresa edo kanpo-erakunde batean egiten bada, derrigorrezkoa al da EHUko zuzendarikide bat izatea?</p>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q10" id="q10a" value="bai">
+                                    <label class="form-check-label" for="q10a">Bai, derrigorrezkoa da EHUko zuzendarikide bat izatea</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q10" id="q10b" value="ez">
+                                    <label class="form-check-label" for="q10b">Ez, enpresako tutorearekin nahikoa da</label>
+                                </div>
+                                <div class="feedback small fw-semibold mt-2" id="fb-q10"></div>
+                            </div>
+
                             <!-- Botones de acción -->
                             <div class="d-flex flex-wrap gap-2">
-                                <button type="button" id="btnCorregir" class="btn btn-site-dark px-4">
+                                <button type="button" id="btnCorregir" class="btn btn-site-dark px-4" aria-label="Zuzendu minitesteko erantzunak">
                                     <i class="bi bi-check2-circle me-1"></i> Zuzendu testa
                                 </button>
-                                <button type="button" id="btnReiniciar" class="btn btn-outline-secondary px-4">
+                                <button type="button" id="btnReiniciar" class="btn btn-outline-secondary px-4" aria-label="Garbitu eta berriz hasi minitesta">
                                     <i class="bi bi-arrow-counterclockwise me-1"></i> Berriz hasi
                                 </button>
                             </div>
 
                             <!-- Caja de resultado global -->
-                            <div id="testResultBox" class="alert mt-4 d-none" role="alert"></div>
+                            <div id="testResultBox" class="alert mt-4 d-none" role="status" aria-live="polite"></div>
 
                         </form>
                     </div>
@@ -359,6 +509,11 @@
 
     </main>
 
+    <!-- BOTÓN FLOTANTE PARA SUBIR ARRIBA -->
+    <a href="#top" class="btn btn-dark shadow position-fixed bottom-0 end-0 m-3 rounded-pill px-3 py-2" aria-label="Igo orriaren hasierara" style="z-index: 1030;">
+        <i class="bi bi-arrow-up"></i> Gora
+    </a>
+
     <!-- FOOTER CONECTADO A ABOUT US -->
     <footer class="mt-5 border-top">
         <div class="footer-header">
@@ -367,10 +522,10 @@
         <div class="container py-4">
             <div class="row align-items-center g-4">
                 <div class="col-12 col-md-4 text-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/EHU_logo.svg" style="max-width: 220px;" alt="UPV/EHU Logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSznUfhhFv22Zl9vEBqTH_41mtO6iD3fQ0J_lD-IQPACg&s=10" style="max-width: 220px;" alt="UPV/EHU Logo">
                 </div>
                 <div class="col-12 col-md-4 text-center">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.626246419082!2d-2.0089!3d43.3082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b072230113c1%3A0xb35a3962635db150!2sFacultad%20de%20Inform%C3%A1tica%20UPV%2FEHU!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="140" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy" title="Informatika Fakultatearen kokapena mapan"></iframe>
                 </div>
                 <div class="col-12 col-md-4 text-center text-md-start small">
                     <p class="mb-1"><strong>Helbidea:</strong> Manuel Lardizabal pasealekua, 1, 20018 Donostia / San Sebastián, Gipuzkoa</p>
@@ -385,58 +540,112 @@
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Lógica JavaScript del Minitest -->
+    <!-- Lógica JavaScript del Minitest de 10 preguntas con enlaces al reglamento -->
     <script>
         document.getElementById('btnCorregir').addEventListener('click', function () {
             const respuestasCorrectas = {
-                q1: { valor: '168', texto: 'Zuzena! Gutxienez 168 kreditu gaindituta egon behar dira.' },
-                q2: { valor: '2', texto: 'Zuzena! Ikasturte bakoitzean 2 deialdi ofizial daude.' },
-                q3: { valor: '200', texto: 'Zuzena! Gutxienez 200 hitzeko gogoeta-atala behar da.' },
-                q4: { valor: 'addi', texto: 'Zuzena! Memoria ADDI gordailu digitalean entregatzen da.' },
-                q5: { valor: '3', texto: 'Zuzena! Epaimahaia 3 irakaslek osatzen dute.' }
+                q1: {
+                    valor: '168',
+                    texto: 'Gutxienez 168 kreditu gaindituta egon behar dira.',
+                    esteka: 'araudia.html#alderdi-orokorrak',
+                    atala: '1. Alderdi Orokorrak eta Izaera'
+                },
+                q2: {
+                    valor: '2',
+                    texto: 'Ikasturte bakoitzean 2 deialdi ofizial daude.',
+                    esteka: 'araudia.html#matrikula-deialdiak',
+                    atala: '3. Matrikula eta Deialdiak'
+                },
+                q3: {
+                    valor: '200',
+                    texto: 'Gutxienez 200 hitzeko gogoeta-atala behar da GJH eta etikari buruz.',
+                    esteka: 'araudia.html#alderdi-orokorrak',
+                    atala: '1. Alderdi Orokorrak eta Izaera'
+                },
+                q4: {
+                    valor: 'addi',
+                    texto: 'Memoria ADDI gordailu digitalean entregatzen da.',
+                    esteka: 'araudia.html#aurkezpena-defentsa',
+                    atala: '8. Aurkezpena eta Defentsa'
+                },
+                q5: {
+                    valor: '3',
+                    texto: 'Epaimahaia 3 irakaslek osatzen dute (Lehendakaria, Idazkaria eta Kidea).',
+                    esteka: 'araudia.html#epaimahaia',
+                    atala: '7. Ebaluazio-Epaimahaia'
+                },
+                q6: {
+                    valor: '12',
+                    texto: 'Informatika Fakultateko GrALak 12 ECTS kredituko lan-karga du.',
+                    esteka: 'araudia.html#alderdi-orokorrak',
+                    atala: '1. Alderdi Orokorrak eta Izaera'
+                },
+                q7: {
+                    valor: '20',
+                    texto: 'Defentsaren gomendatutako iraupena 20 minutukoa da (gehienez 30 minutu).',
+                    esteka: 'araudia.html#aurkezpena-defentsa',
+                    atala: '8. Aurkezpena eta Defentsa'
+                },
+                q8: {
+                    valor: '60',
+                    texto: 'Memoriaren gomendatutako luzera 60 orrialde ingurukoa da (eranskinak kanpo).',
+                    esteka: 'araudia.html#aurkezpena-defentsa',
+                    atala: '8. Aurkezpena eta Defentsa'
+                },
+                q9: {
+                    valor: '9',
+                    texto: 'Ohorezko Matrikula 9,0 edo gehiagoko nota duten lanen artean ematen da (gehienez ikasleen %5ari).',
+                    esteka: 'araudia.html#kalifikazioa',
+                    atala: '9. Ebaluazioa eta Kalifikazioa'
+                },
+                q10: {
+                    valor: 'bai',
+                    texto: 'Enpresa edo kanpo-erakunde batean eginez gero, derrigorrezkoa da EHUko zuzendarikide bat izatea.',
+                    esteka: 'araudia.html#zuzendaritza',
+                    atala: '4. Lanen Zuzendaritza'
+                }
             };
 
             let puntuacion = 0;
-            const total = 5;
+            const total = 10;
 
             for (let key in respuestasCorrectas) {
                 const seleccionada = document.querySelector(`input[name="${key}"]:checked`);
                 const bloque = document.getElementById(`block-${key}`);
                 const feedback = document.getElementById(`fb-${key}`);
 
-                // Limpiar estados previos
                 bloque.classList.remove('border-success', 'bg-success-subtle', 'border-danger', 'bg-danger-subtle');
 
                 if (seleccionada && seleccionada.value === respuestasCorrectas[key].valor) {
                     puntuacion++;
                     bloque.classList.add('border-success', 'bg-success-subtle');
                     feedback.className = 'feedback small fw-semibold mt-2 text-success';
-                    feedback.innerHTML = `<i class="bi bi-check-circle-fill me-1"></i> ${respuestasCorrectas[key].texto}`;
+                    feedback.innerHTML = `<i class="bi bi-check-circle-fill me-1"></i> Zuzena! ${respuestasCorrectas[key].texto}`;
                 } else {
                     bloque.classList.add('border-danger', 'bg-danger-subtle');
                     feedback.className = 'feedback small fw-semibold mt-2 text-danger';
-                    feedback.innerHTML = `<i class="bi bi-x-circle-fill me-1"></i> Okerra. ${respuestasCorrectas[key].texto}`;
+                    feedback.innerHTML = `<i class="bi bi-x-circle-fill me-1"></i> Okerra. ${respuestasCorrectas[key].texto}<br><a href="${respuestasCorrectas[key].esteka}" class="link-danger text-decoration-underline">Kontsultatu araudian (${respuestasCorrectas[key].atala}) &rarr;</a>`;
                 }
             }
 
             const resultBox = document.getElementById('testResultBox');
             resultBox.classList.remove('d-none', 'alert-success', 'alert-warning', 'alert-danger');
 
-            if (puntuacion === 5) {
+            if (puntuacion >= 8) {
                 resultBox.classList.add('alert-success');
                 resultBox.innerHTML = `<strong>Bikain! (${puntuacion}/${total})</strong> GrALaren araudia primeran ezagutzen duzu!`;
-            } else if (puntuacion >= 3) {
+            } else if (puntuacion >= 5) {
                 resultBox.classList.add('alert-warning');
-                resultBox.innerHTML = `<strong>Oso ongi! (${puntuacion}/${total})</strong> Galdera gehienak asmatu dituzu.`;
+                resultBox.innerHTML = `<strong>Oso ongi! (${puntuacion}/${total})</strong> Galdera gehienak asmatu dituzu; berrikusi huts egindakoen estekak araudian.`;
             } else {
                 resultBox.classList.add('alert-danger');
-                resultBox.innerHTML = `<strong>Saiatu berriro (${puntuacion}/${total})</strong> Irakurri webguneko informazioa eta saiatu berriz.`;
+                resultBox.innerHTML = `<strong>Saiatu berriro (${puntuacion}/${total})</strong> Kontsultatu huts egindako galderen estekak araudian eta saiatu berriz.`;
             }
         });
 
         document.getElementById('btnReiniciar').addEventListener('click', function () {
             document.getElementById('gralMinitestForm').reset();
-            const preguntas = ['q1', 'q2', 'q3', 'q4', 'q5'];
+            const preguntas = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
             preguntas.forEach(key => {
                 const bloque = document.getElementById(`block-${key}`);
                 const feedback = document.getElementById(`fb-${key}`);
