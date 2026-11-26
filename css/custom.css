@@ -1,0 +1,235 @@
+/* =========================================================
+   1. BASE Y ACCESIBILIDAD DE TECLADO / LECTORES
+   ========================================================= */
+html {
+    font-size: 16px; /* Tamaño base accesible en móvil y escritorio */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Foco visible al navegar con Tabulador */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #ff9900 !important;
+    outline-offset: 2px !important;
+}
+
+/* Enlace saltar al contenido principal (teclado y screen readers) */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background-color: #000000;
+    color: #ffff00;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #ffff00;
+    border-radius: 6px;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* =========================================================
+   2. NAVEGACIÓN, BREADCRUMB Y BOTÓN "ATZERA"
+   ========================================================= */
+.navbar .nav-link,
+.navbar .dropdown-item,
+.btn-contrast {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar .dropdown-item {
+    display: flex;
+}
+
+.breadcrumb-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.6rem 1rem;
+}
+
+.btn-atzera {
+    min-height: 44px;
+    min-width: 44px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.breadcrumb-bar .breadcrumb-item a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.breadcrumb-bar .breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-bar .breadcrumb-item.active {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+.footer-header {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   3. TAMAÑOS DE BOTÓN Y FUENTE EN MÓVIL (<= 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem; /* 16px mínimo garantizado */
+    }
+
+    p, li, .small, small {
+        font-size: 1rem !important;
+    }
+
+    h1, .display-3 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3, h4 {
+        font-size: 1.25rem !important;
+    }
+
+    /* Área táctil mínima de 44x44px para todos los botones y enlaces de menú */
+    button,
+    .btn,
+    .navbar-toggler,
+    .nav-link,
+    .dropdown-item,
+    input[type="submit"],
+    input[type="button"],
+    select {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        font-size: 1rem !important;
+        padding: 0.6rem 1rem !important;
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        padding-top: 0.5rem;
+    }
+
+    .btn-contrast {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}
+
+/* =========================================================
+   4. MODO ALTO CONTRASTE (Sobreescribe Bootstrap 5)
+   ========================================================= */
+body.high-contrast,
+body.high-contrast main,
+body.high-contrast section,
+body.high-contrast article,
+body.high-contrast footer,
+body.high-contrast .card,
+body.high-contrast .accordion-item,
+body.high-contrast .accordion-body,
+body.high-contrast .modal-content {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast .navbar,
+body.high-contrast .breadcrumb-bar,
+body.high-contrast .footer-header,
+body.high-contrast .dropdown-menu,
+body.high-contrast .hero-banner {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffff00 !important;
+}
+
+body.high-contrast .dropdown-menu,
+body.high-contrast .card,
+body.high-contrast footer {
+    border: 2px solid #ffff00 !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast p,
+body.high-contrast li,
+body.high-contrast span,
+body.high-contrast label,
+body.high-contrast .text-muted,
+body.high-contrast .breadcrumb-item.active {
+    color: #ffffff !important;
+}
+
+body.high-contrast a,
+body.high-contrast .nav-link,
+body.high-contrast .dropdown-item,
+body.high-contrast .navbar-brand {
+    color: #ffff00 !important;
+    text-decoration: underline !important;
+}
+
+body.high-contrast a:hover,
+body.high-contrast .nav-link:hover,
+body.high-contrast .nav-link.active,
+body.high-contrast .dropdown-item:hover {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
+
+body.high-contrast button,
+body.high-contrast .btn,
+body.high-contrast .btn-contrast,
+body.high-contrast .btn-atzera,
+body.high-contrast .navbar-toggler {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+    font-weight: 800 !important;
+}
+
+/* Asegura que las rayas del menú hamburguesa sean negras sobre el botón amarillo */
+body.high-contrast .navbar-toggler-icon {
+    filter: invert(1) grayscale(100%) brightness(0);
+}
+
+body.high-contrast .breadcrumb-item + .breadcrumb-item::before {
+    color: #ffff00 !important;
+}
